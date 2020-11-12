@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E2255DB4940083EC5D /* AppDelegate.swift */; };
+		198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E4255DB4940083EC5D /* SceneDelegate.swift */; };
+		198547E7255DB4940083EC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E6255DB4940083EC5D /* ContentView.swift */; };
+		198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198547E8255DB4940083EC5D /* yeke.xcdatamodeld */; };
+		198547EC255DB4950083EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EB255DB4950083EC5D /* Assets.xcassets */; };
+		198547EF255DB4950083EC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EE255DB4950083EC5D /* Preview Assets.xcassets */; };
+		198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198547F0255DB4950083EC5D /* LaunchScreen.storyboard */; };
+		198547FD255DB4950083EC5D /* yekeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547FC255DB4950083EC5D /* yekeTests.swift */; };
+		19854808255DB4950083EC5D /* yekeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854807255DB4950083EC5D /* yekeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		198547F9255DB4950083EC5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198547D7255DB4940083EC5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 198547DE255DB4940083EC5D;
+			remoteInfo = yeke;
+		};
+		19854804255DB4950083EC5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198547D7255DB4940083EC5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 198547DE255DB4940083EC5D;
+			remoteInfo = yeke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		198547DF255DB4940083EC5D /* yeke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		198547E2255DB4940083EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		198547E4255DB4940083EC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		198547E6255DB4940083EC5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		198547E9255DB4940083EC5D /* yeke.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yeke.xcdatamodel; sourceTree = "<group>"; };
+		198547EB255DB4950083EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		198547EE255DB4950083EC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		198547F1255DB4950083EC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		198547F3255DB4950083EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		198547F8255DB4950083EC5D /* yekeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yekeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		198547FC255DB4950083EC5D /* yekeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yekeTests.swift; sourceTree = "<group>"; };
+		198547FE255DB4950083EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19854803255DB4950083EC5D /* yekeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yekeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19854807255DB4950083EC5D /* yekeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yekeUITests.swift; sourceTree = "<group>"; };
+		19854809255DB4950083EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		198547DC255DB4940083EC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198547F5255DB4950083EC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19854800255DB4950083EC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		198547D6255DB4940083EC5D = {
+			isa = PBXGroup;
+			children = (
+				198547E1255DB4940083EC5D /* yeke */,
+				198547FB255DB4950083EC5D /* yekeTests */,
+				19854806255DB4950083EC5D /* yekeUITests */,
+				198547E0255DB4940083EC5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		198547E0255DB4940083EC5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				198547DF255DB4940083EC5D /* yeke.app */,
+				198547F8255DB4950083EC5D /* yekeTests.xctest */,
+				19854803255DB4950083EC5D /* yekeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		198547E1255DB4940083EC5D /* yeke */ = {
+			isa = PBXGroup;
+			children = (
+				198547E2255DB4940083EC5D /* AppDelegate.swift */,
+				198547E4255DB4940083EC5D /* SceneDelegate.swift */,
+				198547E6255DB4940083EC5D /* ContentView.swift */,
+				198547EB255DB4950083EC5D /* Assets.xcassets */,
+				198547F0255DB4950083EC5D /* LaunchScreen.storyboard */,
+				198547F3255DB4950083EC5D /* Info.plist */,
+				198547E8255DB4940083EC5D /* yeke.xcdatamodeld */,
+				198547ED255DB4950083EC5D /* Preview Content */,
+			);
+			path = yeke;
+			sourceTree = "<group>";
+		};
+		198547ED255DB4950083EC5D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				198547EE255DB4950083EC5D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		198547FB255DB4950083EC5D /* yekeTests */ = {
+			isa = PBXGroup;
+			children = (
+				198547FC255DB4950083EC5D /* yekeTests.swift */,
+				198547FE255DB4950083EC5D /* Info.plist */,
+			);
+			path = yekeTests;
+			sourceTree = "<group>";
+		};
+		19854806255DB4950083EC5D /* yekeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19854807255DB4950083EC5D /* yekeUITests.swift */,
+				19854809255DB4950083EC5D /* Info.plist */,
+			);
+			path = yekeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		198547DE255DB4940083EC5D /* yeke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1985480C255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yeke" */;
+			buildPhases = (
+				198547DB255DB4940083EC5D /* Sources */,
+				198547DC255DB4940083EC5D /* Frameworks */,
+				198547DD255DB4940083EC5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yeke;
+			productName = yeke;
+			productReference = 198547DF255DB4940083EC5D /* yeke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		198547F7255DB4950083EC5D /* yekeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1985480F255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeTests" */;
+			buildPhases = (
+				198547F4255DB4950083EC5D /* Sources */,
+				198547F5255DB4950083EC5D /* Frameworks */,
+				198547F6255DB4950083EC5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				198547FA255DB4950083EC5D /* PBXTargetDependency */,
+			);
+			name = yekeTests;
+			productName = yekeTests;
+			productReference = 198547F8255DB4950083EC5D /* yekeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19854802255DB4950083EC5D /* yekeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19854812255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeUITests" */;
+			buildPhases = (
+				198547FF255DB4950083EC5D /* Sources */,
+				19854800255DB4950083EC5D /* Frameworks */,
+				19854801255DB4950083EC5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19854805255DB4950083EC5D /* PBXTargetDependency */,
+			);
+			name = yekeUITests;
+			productName = yekeUITests;
+			productReference = 19854803255DB4950083EC5D /* yekeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		198547D7255DB4940083EC5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					198547DE255DB4940083EC5D = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					198547F7255DB4950083EC5D = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 198547DE255DB4940083EC5D;
+					};
+					19854802255DB4950083EC5D = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 198547DE255DB4940083EC5D;
+					};
+				};
+			};
+			buildConfigurationList = 198547DA255DB4940083EC5D /* Build configuration list for PBXProject "yeke" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 198547D6255DB4940083EC5D;
+			productRefGroup = 198547E0255DB4940083EC5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				198547DE255DB4940083EC5D /* yeke */,
+				198547F7255DB4950083EC5D /* yekeTests */,
+				19854802255DB4950083EC5D /* yekeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		198547DD255DB4940083EC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */,
+				198547EF255DB4950083EC5D /* Preview Assets.xcassets in Resources */,
+				198547EC255DB4950083EC5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198547F6255DB4950083EC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19854801255DB4950083EC5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		198547DB255DB4940083EC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */,
+				198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */,
+				198547E7255DB4940083EC5D /* ContentView.swift in Sources */,
+				198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198547F4255DB4950083EC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198547FD255DB4950083EC5D /* yekeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		198547FF255DB4950083EC5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19854808255DB4950083EC5D /* yekeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		198547FA255DB4950083EC5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 198547DE255DB4940083EC5D /* yeke */;
+			targetProxy = 198547F9255DB4950083EC5D /* PBXContainerItemProxy */;
+		};
+		19854805255DB4950083EC5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 198547DE255DB4940083EC5D /* yeke */;
+			targetProxy = 19854804255DB4950083EC5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		198547F0255DB4950083EC5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				198547F1255DB4950083EC5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1985480A255DB4950083EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1985480B255DB4950083EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1985480D255DB4950083EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"yeke/Preview Content\"";
+				DEVELOPMENT_TEAM = SF26B434X2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = yeke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yeke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1985480E255DB4950083EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"yeke/Preview Content\"";
+				DEVELOPMENT_TEAM = SF26B434X2;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = yeke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yeke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19854810255DB4950083EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SF26B434X2;
+				INFOPLIST_FILE = yekeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yekeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yeke.app/yeke";
+			};
+			name = Debug;
+		};
+		19854811255DB4950083EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SF26B434X2;
+				INFOPLIST_FILE = yekeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yekeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yeke.app/yeke";
+			};
+			name = Release;
+		};
+		19854813255DB4950083EC5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SF26B434X2;
+				INFOPLIST_FILE = yekeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yekeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = yeke;
+			};
+			name = Debug;
+		};
+		19854814255DB4950083EC5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SF26B434X2;
+				INFOPLIST_FILE = yekeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.minaz.yekeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = yeke;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		198547DA255DB4940083EC5D /* Build configuration list for PBXProject "yeke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1985480A255DB4950083EC5D /* Debug */,
+				1985480B255DB4950083EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1985480C255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yeke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1985480D255DB4950083EC5D /* Debug */,
+				1985480E255DB4950083EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1985480F255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19854810255DB4950083EC5D /* Debug */,
+				19854811255DB4950083EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19854812255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19854813255DB4950083EC5D /* Debug */,
+				19854814255DB4950083EC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		198547E8255DB4940083EC5D /* yeke.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				198547E9255DB4940083EC5D /* yeke.xcdatamodel */,
+			);
+			currentVersion = 198547E9255DB4940083EC5D /* yeke.xcdatamodel */;
+			path = yeke.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 198547D7255DB4940083EC5D /* Project object */;
+}
