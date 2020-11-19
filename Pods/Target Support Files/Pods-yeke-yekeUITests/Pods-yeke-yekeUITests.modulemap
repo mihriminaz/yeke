@@ -1,0 +1,6 @@
+framework module Pods_yeke_yekeUITests {
+  umbrella header "Pods-yeke-yekeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

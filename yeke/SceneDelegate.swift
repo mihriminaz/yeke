@@ -23,7 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
     // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-    let contentView = ContentView().environment(\.managedObjectContext, context)
+    
+    let session = Session()
+    let contentView = ContentView(session: session, chat: ChatModel())
+      .environment(\.managedObjectContext, context)
+//      .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+//        print("Moving back to the foreground!")
+//        HubSession.current.reconnect()
+//      }
+//      .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+//        print("Moving to the background!")
+//        HubSession.current.disconnect()
+//      }
+//      .onReceive(NotificationCenter.default.publisher(for: UIApplication.userDidTakeScreenshotNotification)) { _ in
+//        print("UserModel took a screenshot!")
+//      }
 
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {

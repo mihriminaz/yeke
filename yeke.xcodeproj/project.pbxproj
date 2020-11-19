@@ -3,19 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FDC307FAF8412BF60A050D6 /* Pods_yekeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */; };
 		198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E2255DB4940083EC5D /* AppDelegate.swift */; };
 		198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E4255DB4940083EC5D /* SceneDelegate.swift */; };
-		198547E7255DB4940083EC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E6255DB4940083EC5D /* ContentView.swift */; };
 		198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198547E8255DB4940083EC5D /* yeke.xcdatamodeld */; };
 		198547EC255DB4950083EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EB255DB4950083EC5D /* Assets.xcassets */; };
 		198547EF255DB4950083EC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EE255DB4950083EC5D /* Preview Assets.xcassets */; };
 		198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198547F0255DB4950083EC5D /* LaunchScreen.storyboard */; };
 		198547FD255DB4950083EC5D /* yekeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547FC255DB4950083EC5D /* yekeTests.swift */; };
 		19854808255DB4950083EC5D /* yekeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854807255DB4950083EC5D /* yekeUITests.swift */; };
+		1985481F255DB4B80083EC5D /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854818255DB4B80083EC5D /* QRScannerView.swift */; };
+		19854820255DB4B80083EC5D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854819255DB4B80083EC5D /* ChatView.swift */; };
+		19854821255DB4B80083EC5D /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481A255DB4B80083EC5D /* QRGenerator.swift */; };
+		19854822255DB4B80083EC5D /* ActionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481B255DB4B80083EC5D /* ActionListView.swift */; };
+		19854823255DB4B80083EC5D /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481C255DB4B80083EC5D /* ChatListView.swift */; };
+		19854824255DB4B80083EC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481D255DB4B80083EC5D /* ContentView.swift */; };
+		19854835255DB5090083EC5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482A255DB5090083EC5D /* Session.swift */; };
+		19854836255DB5090083EC5D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482B255DB5090083EC5D /* ChatModel.swift */; };
+		19854837255DB5090083EC5D /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482C255DB5090083EC5D /* AppHelper.swift */; };
+		19854838255DB5090083EC5D /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482D255DB5090083EC5D /* Array+Identifiable.swift */; };
+		19854839255DB5090083EC5D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482E255DB5090083EC5D /* NetworkManager.swift */; };
+		1985483A255DB5090083EC5D /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482F255DB5090083EC5D /* CodeScanner.swift */; };
+		1985483B255DB5090083EC5D /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854830255DB5090083EC5D /* Parser.swift */; };
+		1985483C255DB5090083EC5D /* SignalRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854831255DB5090083EC5D /* SignalRService.swift */; };
+		1985483D255DB5090083EC5D /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */; };
+		1985483E255DB5090083EC5D /* HubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854833255DB5090083EC5D /* HubSession.swift */; };
+		1985483F255DB5090083EC5D /* RestAPIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854834255DB5090083EC5D /* RestAPIResults.swift */; };
+		19854847255DB5100083EC5D /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854844255DB5100083EC5D /* ChatMessage.swift */; };
+		19854848255DB5100083EC5D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854845255DB5100083EC5D /* UserModel.swift */; };
+		19854849255DB5100083EC5D /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854846255DB5100083EC5D /* ChatItem.swift */; };
+		19E1B191255EC621004D02FA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B190255EC621004D02FA /* Chat.swift */; };
+		4B4F8E715848D84FF7D4F172 /* Pods_yeke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */; };
+		8B8479D1EF44DE1E918BB545 /* Pods_yeke_yekeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC94A35CFD50D1C437631F8 /* Pods-yekeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yekeTests.release.xcconfig"; path = "Target Support Files/Pods-yekeTests/Pods-yekeTests.release.xcconfig"; sourceTree = "<group>"; };
 		198547DF255DB4940083EC5D /* yeke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198547E2255DB4940083EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198547E4255DB4940083EC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		198547E6255DB4940083EC5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		198547E9255DB4940083EC5D /* yeke.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yeke.xcdatamodel; sourceTree = "<group>"; };
 		198547EB255DB4950083EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198547EE255DB4950083EC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +74,35 @@
 		19854803255DB4950083EC5D /* yekeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yekeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19854807255DB4950083EC5D /* yekeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yekeUITests.swift; sourceTree = "<group>"; };
 		19854809255DB4950083EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19854818255DB4B80083EC5D /* QRScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		19854819255DB4B80083EC5D /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		1985481A255DB4B80083EC5D /* QRGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
+		1985481B255DB4B80083EC5D /* ActionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionListView.swift; sourceTree = "<group>"; };
+		1985481C255DB4B80083EC5D /* ChatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		1985481D255DB4B80083EC5D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../uthere/uthere/ContentView.swift; sourceTree = "<group>"; };
+		1985482A255DB5090083EC5D /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		1985482B255DB5090083EC5D /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		1985482C255DB5090083EC5D /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		1985482D255DB5090083EC5D /* Array+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		1985482E255DB5090083EC5D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1985482F255DB5090083EC5D /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
+		19854830255DB5090083EC5D /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		19854831255DB5090083EC5D /* SignalRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalRService.swift; sourceTree = "<group>"; };
+		19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
+		19854833255DB5090083EC5D /* HubSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HubSession.swift; sourceTree = "<group>"; };
+		19854834255DB5090083EC5D /* RestAPIResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIResults.swift; sourceTree = "<group>"; };
+		19854844255DB5100083EC5D /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		19854845255DB5100083EC5D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		19854846255DB5100083EC5D /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		19E1B190255EC621004D02FA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yekeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke_yekeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63846194DC6B02102736337A /* Pods-yeke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke.release.xcconfig"; path = "Target Support Files/Pods-yeke/Pods-yeke.release.xcconfig"; sourceTree = "<group>"; };
+		7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3C29E556B7184DE0B21433 /* Pods-yeke-yekeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke-yekeUITests.debug.xcconfig"; path = "Target Support Files/Pods-yeke-yekeUITests/Pods-yeke-yekeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		996763B054319FE23157CCEB /* Pods-yeke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke.debug.xcconfig"; path = "Target Support Files/Pods-yeke/Pods-yeke.debug.xcconfig"; sourceTree = "<group>"; };
+		9A760779992E44F53CA77158 /* Pods-yekeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yekeTests.debug.xcconfig"; path = "Target Support Files/Pods-yekeTests/Pods-yekeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F315411ACFD0CB001D6287D1 /* Pods-yeke-yekeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke-yekeUITests.release.xcconfig"; path = "Target Support Files/Pods-yeke-yekeUITests/Pods-yeke-yekeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4F8E715848D84FF7D4F172 /* Pods_yeke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDC307FAF8412BF60A050D6 /* Pods_yekeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8479D1EF44DE1E918BB545 /* Pods_yeke_yekeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +140,8 @@
 				198547FB255DB4950083EC5D /* yekeTests */,
 				19854806255DB4950083EC5D /* yekeUITests */,
 				198547E0255DB4940083EC5D /* Products */,
+				D7F999A3471856DAB084BE04 /* Pods */,
+				A6438214DD054A62E841DD17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +158,16 @@
 		198547E1255DB4940083EC5D /* yeke */ = {
 			isa = PBXGroup;
 			children = (
+				19854829255DB5090083EC5D /* Shared */,
+				19854843255DB5100083EC5D /* Models */,
 				198547E2255DB4940083EC5D /* AppDelegate.swift */,
 				198547E4255DB4940083EC5D /* SceneDelegate.swift */,
-				198547E6255DB4940083EC5D /* ContentView.swift */,
+				1985481D255DB4B80083EC5D /* ContentView.swift */,
+				1985481B255DB4B80083EC5D /* ActionListView.swift */,
+				1985481C255DB4B80083EC5D /* ChatListView.swift */,
+				19854819255DB4B80083EC5D /* ChatView.swift */,
+				1985481A255DB4B80083EC5D /* QRGenerator.swift */,
+				19854818255DB4B80083EC5D /* QRScannerView.swift */,
 				198547EB255DB4950083EC5D /* Assets.xcassets */,
 				198547F0255DB4950083EC5D /* LaunchScreen.storyboard */,
 				198547F3255DB4950083EC5D /* Info.plist */,
@@ -139,6 +203,58 @@
 			path = yekeUITests;
 			sourceTree = "<group>";
 		};
+		19854829255DB5090083EC5D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1985482A255DB5090083EC5D /* Session.swift */,
+				1985482B255DB5090083EC5D /* ChatModel.swift */,
+				1985482C255DB5090083EC5D /* AppHelper.swift */,
+				1985482D255DB5090083EC5D /* Array+Identifiable.swift */,
+				1985482E255DB5090083EC5D /* NetworkManager.swift */,
+				1985482F255DB5090083EC5D /* CodeScanner.swift */,
+				19854830255DB5090083EC5D /* Parser.swift */,
+				19854831255DB5090083EC5D /* SignalRService.swift */,
+				19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */,
+				19854833255DB5090083EC5D /* HubSession.swift */,
+				19854834255DB5090083EC5D /* RestAPIResults.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		19854843255DB5100083EC5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19854844255DB5100083EC5D /* ChatMessage.swift */,
+				19854845255DB5100083EC5D /* UserModel.swift */,
+				19854846255DB5100083EC5D /* ChatItem.swift */,
+				19E1B190255EC621004D02FA /* Chat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A6438214DD054A62E841DD17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */,
+				62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */,
+				5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7F999A3471856DAB084BE04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996763B054319FE23157CCEB /* Pods-yeke.debug.xcconfig */,
+				63846194DC6B02102736337A /* Pods-yeke.release.xcconfig */,
+				8B3C29E556B7184DE0B21433 /* Pods-yeke-yekeUITests.debug.xcconfig */,
+				F315411ACFD0CB001D6287D1 /* Pods-yeke-yekeUITests.release.xcconfig */,
+				9A760779992E44F53CA77158 /* Pods-yekeTests.debug.xcconfig */,
+				0AC94A35CFD50D1C437631F8 /* Pods-yekeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1985480C255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yeke" */;
 			buildPhases = (
+				B5CED1802D96D18F5F644259 /* [CP] Check Pods Manifest.lock */,
 				198547DB255DB4940083EC5D /* Sources */,
 				198547DC255DB4940083EC5D /* Frameworks */,
 				198547DD255DB4940083EC5D /* Resources */,
+				D826CD99815DBB80EFC54044 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1985480F255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeTests" */;
 			buildPhases = (
+				565A68E2CEE2A1C294B53784 /* [CP] Check Pods Manifest.lock */,
 				198547F4255DB4950083EC5D /* Sources */,
 				198547F5255DB4950083EC5D /* Frameworks */,
 				198547F6255DB4950083EC5D /* Resources */,
@@ -181,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19854812255DB4950083EC5D /* Build configuration list for PBXNativeTarget "yekeUITests" */;
 			buildPhases = (
+				45726523FD7A0B36BF55CB3B /* [CP] Check Pods Manifest.lock */,
 				198547FF255DB4950083EC5D /* Sources */,
 				19854800255DB4950083EC5D /* Frameworks */,
 				19854801255DB4950083EC5D /* Resources */,
+				CFCAD9DF538F7AE29919F3FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,15 +385,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45726523FD7A0B36BF55CB3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yeke-yekeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		565A68E2CEE2A1C294B53784 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yekeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CED1802D96D18F5F644259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yeke-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFCAD9DF538F7AE29919F3FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yeke-yekeUITests/Pods-yeke-yekeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yeke-yekeUITests/Pods-yeke-yekeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yeke-yekeUITests/Pods-yeke-yekeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D826CD99815DBB80EFC54044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yeke/Pods-yeke-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yeke/Pods-yeke-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yeke/Pods-yeke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		198547DB255DB4940083EC5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19854836255DB5090083EC5D /* ChatModel.swift in Sources */,
 				198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */,
+				1985483E255DB5090083EC5D /* HubSession.swift in Sources */,
 				198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */,
-				198547E7255DB4940083EC5D /* ContentView.swift in Sources */,
+				19854849255DB5100083EC5D /* ChatItem.swift in Sources */,
+				19854839255DB5090083EC5D /* NetworkManager.swift in Sources */,
+				19854847255DB5100083EC5D /* ChatMessage.swift in Sources */,
+				19854838255DB5090083EC5D /* Array+Identifiable.swift in Sources */,
 				198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */,
+				19854823255DB4B80083EC5D /* ChatListView.swift in Sources */,
+				1985483C255DB5090083EC5D /* SignalRService.swift in Sources */,
+				1985483F255DB5090083EC5D /* RestAPIResults.swift in Sources */,
+				19854822255DB4B80083EC5D /* ActionListView.swift in Sources */,
+				19E1B191255EC621004D02FA /* Chat.swift in Sources */,
+				19854824255DB4B80083EC5D /* ContentView.swift in Sources */,
+				19854835255DB5090083EC5D /* Session.swift in Sources */,
+				19854820255DB4B80083EC5D /* ChatView.swift in Sources */,
+				19854837255DB5090083EC5D /* AppHelper.swift in Sources */,
+				1985483D255DB5090083EC5D /* KeychainSwiftDistrib.swift in Sources */,
+				1985483B255DB5090083EC5D /* Parser.swift in Sources */,
+				19854848255DB5100083EC5D /* UserModel.swift in Sources */,
+				1985483A255DB5090083EC5D /* CodeScanner.swift in Sources */,
+				1985481F255DB4B80083EC5D /* QRScannerView.swift in Sources */,
+				19854821255DB4B80083EC5D /* QRGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +681,7 @@
 		};
 		1985480D255DB4950083EC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996763B054319FE23157CCEB /* Pods-yeke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +703,7 @@
 		};
 		1985480E255DB4950083EC5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63846194DC6B02102736337A /* Pods-yeke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +725,7 @@
 		};
 		19854810255DB4950083EC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A760779992E44F53CA77158 /* Pods-yekeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +748,7 @@
 		};
 		19854811255DB4950083EC5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AC94A35CFD50D1C437631F8 /* Pods-yekeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +771,7 @@
 		};
 		19854813255DB4950083EC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3C29E556B7184DE0B21433 /* Pods-yeke-yekeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +792,7 @@
 		};
 		19854814255DB4950083EC5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F315411ACFD0CB001D6287D1 /* Pods-yeke-yekeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

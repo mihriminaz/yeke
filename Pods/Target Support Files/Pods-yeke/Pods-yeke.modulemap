@@ -1,0 +1,6 @@
+framework module Pods_yeke {
+  umbrella header "Pods-yeke-umbrella.h"
+
+  export *
+  module * { export * }
+}

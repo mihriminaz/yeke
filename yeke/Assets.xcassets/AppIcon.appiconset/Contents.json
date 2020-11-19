@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "android-chrome-192x192 copy 2.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -21,21 +22,25 @@
       "size" : "29x29"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-3.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-2.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -46,6 +51,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-5.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
@@ -61,11 +67,13 @@
       "size" : "29x29"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-6.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "android-chrome-192x192 copy 3-4.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
@@ -86,6 +94,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "android-chrome-512x512.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
