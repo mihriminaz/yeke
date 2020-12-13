@@ -7,11 +7,11 @@
 
 import Foundation
 
-//struct ChatMessage: Identifiable, Codable, Hashable {
-//  var id: Int
-//  var chatId: Int?
-//  var code: String?
-//  var vendor: String?
-//  var message: String
-//  var createdOn: String
-//}
+struct ChatMessage: Identifiable, Codable, Hashable {
+  var id: Int
+  var chatId: Int?
+  var code: String?
+  var vendor: String?
+  var message: String
+  var createdOn: String
+}

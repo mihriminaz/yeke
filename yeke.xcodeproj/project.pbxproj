@@ -10,7 +10,6 @@
 		0FDC307FAF8412BF60A050D6 /* Pods_yekeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */; };
 		198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E2255DB4940083EC5D /* AppDelegate.swift */; };
 		198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E4255DB4940083EC5D /* SceneDelegate.swift */; };
-		198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198547E8255DB4940083EC5D /* yeke.xcdatamodeld */; };
 		198547EC255DB4950083EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EB255DB4950083EC5D /* Assets.xcassets */; };
 		198547EF255DB4950083EC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EE255DB4950083EC5D /* Preview Assets.xcassets */; };
 		198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198547F0255DB4950083EC5D /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 		19854847255DB5100083EC5D /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854844255DB5100083EC5D /* ChatMessage.swift */; };
 		19854848255DB5100083EC5D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854845255DB5100083EC5D /* UserModel.swift */; };
 		19854849255DB5100083EC5D /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854846255DB5100083EC5D /* ChatItem.swift */; };
-		19E1B191255EC621004D02FA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B190255EC621004D02FA /* Chat.swift */; };
 		4B4F8E715848D84FF7D4F172 /* Pods_yeke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */; };
 		8B8479D1EF44DE1E918BB545 /* Pods_yeke_yekeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +61,6 @@
 		198547DF255DB4940083EC5D /* yeke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198547E2255DB4940083EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198547E4255DB4940083EC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		198547E9255DB4940083EC5D /* yeke.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yeke.xcdatamodel; sourceTree = "<group>"; };
 		198547EB255DB4950083EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198547EE255DB4950083EC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		198547F1255DB4950083EC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 		19854844255DB5100083EC5D /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		19854845255DB5100083EC5D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		19854846255DB5100083EC5D /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
-		19E1B190255EC621004D02FA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yekeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke_yekeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63846194DC6B02102736337A /* Pods-yeke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke.release.xcconfig"; path = "Target Support Files/Pods-yeke/Pods-yeke.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +167,6 @@
 				198547EB255DB4950083EC5D /* Assets.xcassets */,
 				198547F0255DB4950083EC5D /* LaunchScreen.storyboard */,
 				198547F3255DB4950083EC5D /* Info.plist */,
-				198547E8255DB4940083EC5D /* yeke.xcdatamodeld */,
 				198547ED255DB4950083EC5D /* Preview Content */,
 			);
 			path = yeke;
@@ -227,7 +222,6 @@
 				19854844255DB5100083EC5D /* ChatMessage.swift */,
 				19854845255DB5100083EC5D /* UserModel.swift */,
 				19854846255DB5100083EC5D /* ChatItem.swift */,
-				19E1B190255EC621004D02FA /* Chat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -501,12 +495,10 @@
 				19854839255DB5090083EC5D /* NetworkManager.swift in Sources */,
 				19854847255DB5100083EC5D /* ChatMessage.swift in Sources */,
 				19854838255DB5090083EC5D /* Array+Identifiable.swift in Sources */,
-				198547EA255DB4940083EC5D /* yeke.xcdatamodeld in Sources */,
 				19854823255DB4B80083EC5D /* ChatListView.swift in Sources */,
 				1985483C255DB5090083EC5D /* SignalRService.swift in Sources */,
 				1985483F255DB5090083EC5D /* RestAPIResults.swift in Sources */,
 				19854822255DB4B80083EC5D /* ActionListView.swift in Sources */,
-				19E1B191255EC621004D02FA /* Chat.swift in Sources */,
 				19854824255DB4B80083EC5D /* ContentView.swift in Sources */,
 				19854835255DB5090083EC5D /* Session.swift in Sources */,
 				19854820255DB4B80083EC5D /* ChatView.swift in Sources */,
@@ -851,19 +843,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		198547E8255DB4940083EC5D /* yeke.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				198547E9255DB4940083EC5D /* yeke.xcdatamodel */,
-			);
-			currentVersion = 198547E9255DB4940083EC5D /* yeke.xcdatamodel */;
-			path = yeke.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 198547D7255DB4940083EC5D /* Project object */;
 }

@@ -13,22 +13,19 @@ import SwiftUI
 class ChatModel: ObservableObject {
   @Published private(set) var lastReceivedChatItem: ChatItem?
   @Published private(set) var currentChatItem: ChatItem?
-  @Environment(\.managedObjectContext) var context
   @Published var chatList = [ChatItem]()
   var token: String? {
     didSet { getChatListItems() }
   }
   
-  func addMessageToChat(chatId: Int, message: Message) -> Bool {
-    if currentChatItem != nil, currentChatItem!.id == chatId {
-      currentChatItem?.appendMessagesToChat(message: message, context: context)
+  func addMessageToChat(chatId: Int, message: ChatMessage) -> Bool {
+    if currentChatItem != nil, currentChatItem!.id == chatId {     currentChatItem?.messageList?.append(message)
     }
     
     if let chatItem = self.chatList.filter ({ chatItem in
       chatItem.id == chatId
     }).first {
-      if let chosenIndex = self.chatList.firstIndex(matching: chatItem) {
-        self.chatList[chosenIndex].appendMessagesToChat(message: message, context: context)
+      if let chosenIndex = self.chatList.firstIndex(matching: chatItem) {       self.chatList[chosenIndex].appendMessage(message: message)
         return true
       }
     }
@@ -68,8 +65,7 @@ class ChatModel: ObservableObject {
 
   func getChatMessages() {
     guard let chatID = self.currentChatItem?.id, let token = token else { return }
-    
-    NetworkManager().getChatMessages(chatId: Int(chatID), pageIndex: 0, token: token) { (data) in
+    NetworkManager().getChatMessages(chatId: chatID, pageIndex: 0, token: token) { (data) in
 //      print("getChatMessages succeeded \(data)")
       if let jsonData = data.data(using: .utf8) {
         let decoder = JSONDecoder()
@@ -79,7 +75,7 @@ class ChatModel: ObservableObject {
           if let chatMessageList = parsedResult.data {
 //            print("token \(chatMessageList)")
             DispatchQueue.main.async {
-              self.currentChatItem?.setMessagesToChat(messages: chatMessageList, context: context)
+              self.currentChatItem?.setMessages(messages: chatMessageList)
             }
           }
         } catch { // Couldn't create audio player object, log the error

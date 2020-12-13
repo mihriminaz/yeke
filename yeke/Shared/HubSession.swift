@@ -13,7 +13,7 @@ class HubSession: ObservableObject {
   @Published private(set) var connection: SignalRService?
   static let current: HubSession = HubSession()
   
-  func setConnection(token: String, handleMessage:@escaping (Message?) -> ()) {
+  func setConnection(token: String, handleMessage:@escaping (ChatMessage?) -> ()) {
     if let url = URL(string: "https://chattyapp.azurewebsites.net/privateHub") {
       connection = SignalRService(url: url, token: token, handleMessage: handleMessage)
     }

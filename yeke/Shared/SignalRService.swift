@@ -48,7 +48,7 @@ public class SignalRService: HubConnectionDelegate {
   
   private var connection: HubConnection
 
-  init(url: URL, token: String, handleMessage:@escaping (_ message: Message?) -> Void ) {
+  init(url: URL, token: String, handleMessage:@escaping (_ message: ChatMessage?) -> Void ) {
   connection = HubConnectionBuilder(url: url)
     .withHttpConnectionOptions() { httpConnectionOptions in
         httpConnectionOptions.accessTokenProvider = { return token }
@@ -57,8 +57,8 @@ public class SignalRService: HubConnectionDelegate {
     .build()
 
     connection.delegate = self
-  
-    connection.on(method: "ReceiveMessage") { (_ message: Message?) in
+    
+    connection.on(method: "ReceiveMessage") { (_ message: ChatMessage?) in
       print("ReceiveMessage: chatCode - \(String(describing: message?.message)), vendor - \(String(describing: message?.chatId))")
       handleMessage(message)
     }

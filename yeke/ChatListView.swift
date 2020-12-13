@@ -13,7 +13,9 @@ struct ChatListView: View {
 
   var body: some View {
     List(chat.chatList) { chatItem in
-      ChatListItemView(code: chatItem.code, chat: chat).environmentObject(session)
+      if let code = chatItem.code {
+        ChatListItemView(code: code, chat: chat).environmentObject(session)
+      }
     }.environment(\.defaultMinListRowHeight, 75)
   }
 }
