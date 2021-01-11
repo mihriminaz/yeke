@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import CoreData
 import SwiftUI
 
 class ChatModel: ObservableObject {

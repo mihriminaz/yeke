@@ -103,8 +103,16 @@ class Session: ObservableObject {
           }
         }
       }
-    } errorHandler: { Error in
-      completionHandler(nil)
+    } errorHandler: { error in
+      if let errorTyped = error as? BackendError {
+        switch errorTyped {
+        case .AuthenticationError:
+          self.initialConnection()
+          completionHandler(nil)
+        default:
+          completionHandler(nil)
+        }
+      }
     }
   }
 

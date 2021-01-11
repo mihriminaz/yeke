@@ -30,7 +30,7 @@ struct QRGeneratorView: View {
       Spacer()
       Image(uiImage: (code.qrCode ?? UIImage(systemName: "xmark.circle"))!)
       Button(action: {
-        UIPasteboard.general.string = "uthere://chat?\(code)"
+        UIPasteboard.general.string = "yeke://chat?\(code)"
       }) { Text("Copy Link") }
       .padding(20)
       Spacer()

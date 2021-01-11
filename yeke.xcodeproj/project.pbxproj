@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0FDC307FAF8412BF60A050D6 /* Pods_yekeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */; };
 		198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E2255DB4940083EC5D /* AppDelegate.swift */; };
-		198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547E4255DB4940083EC5D /* SceneDelegate.swift */; };
 		198547EC255DB4950083EC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EB255DB4950083EC5D /* Assets.xcassets */; };
 		198547EF255DB4950083EC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 198547EE255DB4950083EC5D /* Preview Assets.xcassets */; };
 		198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198547F0255DB4950083EC5D /* LaunchScreen.storyboard */; };
@@ -60,7 +59,6 @@
 		0AC94A35CFD50D1C437631F8 /* Pods-yekeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yekeTests.release.xcconfig"; path = "Target Support Files/Pods-yekeTests/Pods-yekeTests.release.xcconfig"; sourceTree = "<group>"; };
 		198547DF255DB4940083EC5D /* yeke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198547E2255DB4940083EC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		198547E4255DB4940083EC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		198547EB255DB4950083EC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		198547EE255DB4950083EC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		198547F1255DB4950083EC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				19854829255DB5090083EC5D /* Shared */,
 				19854843255DB5100083EC5D /* Models */,
 				198547E2255DB4940083EC5D /* AppDelegate.swift */,
-				198547E4255DB4940083EC5D /* SceneDelegate.swift */,
 				1985481D255DB4B80083EC5D /* ContentView.swift */,
 				1985481B255DB4B80083EC5D /* ActionListView.swift */,
 				1985481C255DB4B80083EC5D /* ChatListView.swift */,
@@ -490,7 +487,6 @@
 				19854836255DB5090083EC5D /* ChatModel.swift in Sources */,
 				198547E3255DB4940083EC5D /* AppDelegate.swift in Sources */,
 				1985483E255DB5090083EC5D /* HubSession.swift in Sources */,
-				198547E5255DB4940083EC5D /* SceneDelegate.swift in Sources */,
 				19854849255DB5100083EC5D /* ChatItem.swift in Sources */,
 				19854839255DB5090083EC5D /* NetworkManager.swift in Sources */,
 				19854847255DB5100083EC5D /* ChatMessage.swift in Sources */,
