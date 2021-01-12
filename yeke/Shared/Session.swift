@@ -13,28 +13,24 @@ class Session: ObservableObject {
   private var vendorId: String? { UIDevice.current.identifierForVendor?.uuidString }
   @Published private(set) var connected: Bool = false
   @Published private(set) var currentUser: UserModel?
-  var token: String? { currentUser?.token }
-  
   @Published var scannedCode: String?
-  
+  var token: String? { currentUser?.token }
   let keychain = KeychainSwift()
   
   init() {
     currentUser = UserModel(keychain: KeychainSwift())
     
-    guard self.vendorId != nil else {
-      print("app can not be used no vendor")
-      return
-    }
+    // app can not be used no vendor
+    guard self.vendorId != nil else { return }
     
+    // phone reset
     if self.currentUser?.userName == nil {
-      // phone reset
       register(user: vendorId)
       return
     }
     
+    // phone reset
     if let _ = self.currentUser?.userName, vendorId != currentUser?.userName {
-      // phone reset
       currentUser?.wipe()
       register(user: vendorId)
       return
@@ -47,12 +43,12 @@ class Session: ObservableObject {
     if let userName = currentUser?.userName, let password = currentUser?.password {
       // user & password is there
       if !userName.contains(self.vendorId!) {
-          // user deleted the app installed again
-          // wipe everything!
-          // delete user because of this reason, use flag & store this information???
-          print("user deleted the app & installed again")
+        // user deleted the app installed again
+        // wipe everything!
+        // delete user because of this reason, use flag & store this information???
+        print("user deleted the app & installed again")
         currentUser?.wipe()
-          self.reregister()
+        self.reregister()
       } else { // login
         self.login(userName: userName, password: password)
       }
@@ -63,14 +59,10 @@ class Session: ObservableObject {
   
   func login(userName: String, password: String) {
     NetworkManager().login(userName: userName, password: password) { data in
-//      print("resut \(data)")
-      
       if let jsonData = data.data(using: .utf8) {
         let decoder = JSONDecoder()
         if let parsedResult: LoginResult = try? decoder.decode(LoginResult.self, from: jsonData) {
-//          print("parsedResult \(parsedResult)")
           if let token = parsedResult.data?.token {
-//            print("token \(token)")
             DispatchQueue.main.async {
               self.currentUser = UserModel(keychain: KeychainSwift(), userName: userName, password: password, token: token)
               self.connected = true
@@ -82,8 +74,8 @@ class Session: ObservableObject {
         }
       }
     } errorHandler: { error in
-        self.reregister()
-      }
+      self.reregister()
+    }
   }
   
   func generateInvitationCode(completionHandler: @escaping (String?) -> Void) {
@@ -132,13 +124,10 @@ class Session: ObservableObject {
       if let jsonData = data.data(using: .utf8) {
         let decoder = JSONDecoder()
         if let parsedResult: LoginResult = try? decoder.decode(LoginResult.self, from: jsonData) {
-//          print("parsedResult \(parsedResult)")
-            if let token = parsedResult.data?.token {
-//              print("token \(token)")
-              self.currentUser = UserModel(keychain: KeychainSwift(), userName: userName, password: pwd, token: token)
-              self.connected = true
-//              self.login(userName: userName, password: pwd)
-            }
+          if let token = parsedResult.data?.token {
+            self.currentUser = UserModel(keychain: KeychainSwift(), userName: userName, password: pwd, token: token)
+            self.connected = true
+          }
         }
       }
     } errorHandler: { error in

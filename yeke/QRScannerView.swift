@@ -36,11 +36,11 @@ struct QRScannerView: View {
   }
 }
 
-//struct QRScannerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QRScannerView(sharedScannedCode: )
-//    }
-//}
+struct QRScannerView_Previews: PreviewProvider {
+    static var previews: some View {
+        QRScannerView(
+    }
+}
 
 
 

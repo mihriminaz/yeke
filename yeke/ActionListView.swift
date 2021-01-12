@@ -26,49 +26,10 @@ struct ActionListView: View {
   @ViewBuilder
   private func body(for size: CGSize) -> some View {
     List {
-      Button(action: {
-        guard let token = session.token else { return }
-        NetworkManager().startRandomChat(token: token) { data in
-          print("data \(data)")
-            
-          guard let jsonData = data.data(using: .utf8) else { return }
-          let decoder = JSONDecoder()
-              
-          do {
-            if let chatItemResult: ChatItemResult = try? decoder.decode(ChatItemResult.self, from: jsonData) {
-              if let chatItem: ChatItem = chatItemResult.data {
-                print("chatItem \(chatItem)")
-                DispatchQueue.main.async {
-                  self.chat.appendToChatList(chatItem)
-                  self.chat.setCurrentChatItem(chatItem)
-                  self.showRandomChatView = true
-                }
-              }
-            }
-          } catch {
-            // Couldn't create audio player object, log the error
-            print("startRandomChat  \(error)")
-          }
-        } errorHandler: { error in
-          print("Error \(error)")
-        }
-      }) { Text("Random Chat")}
-      
-      Button(action: {
-        self.isPresentingScanner = true
-      }) { Text("Scan QR")}
-      .sheet(isPresented: $isPresentingScanner, content: { self.scannerSheet })
-      
-      Button(action: {
-        session.generateInvitationCode { code in
-          DispatchQueue.main.async {
-            if let code = code {
-              self.qrCode = code
-              self.showQRGeneratorView = true
-            }
-          }
-        }
-      }) { Text("Generate Chat Code")}
+      Button(action: { startRandomChat() }) { Text("Random Chat") }
+      Button(action: { self.isPresentingScanner = true }) { Text("Scan QR")}
+       .sheet(isPresented: $isPresentingScanner, content: { self.scannerSheet })
+      Button(action: { generateRandomCode() }) { Text("Generate Chat Code") }
     }
     .sheet(isPresented: $showQRGeneratorView) {
       QRGeneratorView(chat: chat, code: self.$qrCode, showQRGeneratorView: $showQRGeneratorView, showChatView: $showChatView)
@@ -91,7 +52,6 @@ struct ActionListView: View {
       }
     }
     .listStyle(PlainListStyle())
-    .frame(height: 132)
   }
   
   var scannerSheet : some View {
@@ -104,6 +64,7 @@ struct ActionListView: View {
         }
     })
   }
+  
   func setOpenURL(url: URL?, completionHandler: @escaping (ChatItem?) -> Void)  {
     guard let token = session.token, let urlString: String =  url?.absoluteString else { return }
     let splittedURLString = urlString.split{$0 == "?"}
@@ -119,22 +80,59 @@ struct ActionListView: View {
       let decoder = JSONDecoder()
           
       do {
-        if let chatItemResult: ChatItemResult = try? decoder.decode(ChatItemResult.self, from: jsonData) {
+        let chatItemResult: ChatItemResult = try decoder.decode(ChatItemResult.self, from: jsonData)
           if let chatItem: ChatItem = chatItemResult.data {
 //            print("chatItem \(chatItem)")
             DispatchQueue.main.async {
               self.chat.appendToChatList(chatItem)
-              chat.setCurrentChatItem(chatItem)
-              showChatView = true
+              self.chat.setCurrentChatItem(chatItem)
+              self.showChatView = true
             }
           }
-        }
       } catch {
         // Couldn't create audio player object, log the error
         print("Couldn't parse the active chats  \(error)")
       }
     } errorHandler: { error in
       print("errorororor \(error)")
+    }
+  }
+  
+  func startRandomChat() {
+    guard let token = session.token else { return }
+    NetworkManager().startRandomChat(token: token) { data in
+      print("data \(data)")
+        
+      guard let jsonData = data.data(using: .utf8) else { return }
+      let decoder = JSONDecoder()
+          
+      do {
+        let chatItemResult: ChatItemResult = try decoder.decode(ChatItemResult.self, from: jsonData)
+          if let chatItem: ChatItem = chatItemResult.data {
+            print("chatItem \(chatItem)")
+            DispatchQueue.main.async {
+              self.chat.appendToChatList(chatItem)
+              self.chat.setCurrentChatItem(chatItem)
+              self.showRandomChatView = true
+            }
+          }
+      } catch {
+        // Couldn't create audio player object, log the error
+        print("startRandomChat  \(error)")
+      }
+    } errorHandler: { error in
+      print("Error \(error)")
+    }
+  }
+  
+  func generateRandomCode() {
+    session.generateInvitationCode { code in
+      DispatchQueue.main.async {
+        if let code = code {
+          self.qrCode = code
+          self.showQRGeneratorView = true
+        }
+      }
     }
   }
 }

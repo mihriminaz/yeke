@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct Yeke: App {
-    var body: some Scene {
-        WindowGroup {
-          let session = Session()
-          let chat = ChatModel()
-            ContentView(session: session, chat: chat)
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView(session: Session(), chat: ChatModel())
     }
+  }
 }

@@ -249,3 +249,4 @@ struct CodeScannerView_Previews: PreviewProvider {
         }
     }
 }
+

@@ -14,7 +14,6 @@
 		198547F2255DB4950083EC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198547F0255DB4950083EC5D /* LaunchScreen.storyboard */; };
 		198547FD255DB4950083EC5D /* yekeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198547FC255DB4950083EC5D /* yekeTests.swift */; };
 		19854808255DB4950083EC5D /* yekeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854807255DB4950083EC5D /* yekeUITests.swift */; };
-		1985481F255DB4B80083EC5D /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854818255DB4B80083EC5D /* QRScannerView.swift */; };
 		19854820255DB4B80083EC5D /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854819255DB4B80083EC5D /* ChatView.swift */; };
 		19854821255DB4B80083EC5D /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481A255DB4B80083EC5D /* QRGenerator.swift */; };
 		19854822255DB4B80083EC5D /* ActionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985481B255DB4B80083EC5D /* ActionListView.swift */; };
@@ -26,7 +25,6 @@
 		19854838255DB5090083EC5D /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482D255DB5090083EC5D /* Array+Identifiable.swift */; };
 		19854839255DB5090083EC5D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482E255DB5090083EC5D /* NetworkManager.swift */; };
 		1985483A255DB5090083EC5D /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985482F255DB5090083EC5D /* CodeScanner.swift */; };
-		1985483B255DB5090083EC5D /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854830255DB5090083EC5D /* Parser.swift */; };
 		1985483C255DB5090083EC5D /* SignalRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854831255DB5090083EC5D /* SignalRService.swift */; };
 		1985483D255DB5090083EC5D /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */; };
 		1985483E255DB5090083EC5D /* HubSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854833255DB5090083EC5D /* HubSession.swift */; };
@@ -69,7 +67,6 @@
 		19854803255DB4950083EC5D /* yekeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yekeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19854807255DB4950083EC5D /* yekeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yekeUITests.swift; sourceTree = "<group>"; };
 		19854809255DB4950083EC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19854818255DB4B80083EC5D /* QRScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		19854819255DB4B80083EC5D /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1985481A255DB4B80083EC5D /* QRGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		1985481B255DB4B80083EC5D /* ActionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionListView.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		1985482D255DB5090083EC5D /* Array+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
 		1985482E255DB5090083EC5D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1985482F255DB5090083EC5D /* CodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
-		19854830255DB5090083EC5D /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		19854831255DB5090083EC5D /* SignalRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalRService.swift; sourceTree = "<group>"; };
 		19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
 		19854833255DB5090083EC5D /* HubSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HubSession.swift; sourceTree = "<group>"; };
@@ -160,7 +156,6 @@
 				1985481C255DB4B80083EC5D /* ChatListView.swift */,
 				19854819255DB4B80083EC5D /* ChatView.swift */,
 				1985481A255DB4B80083EC5D /* QRGenerator.swift */,
-				19854818255DB4B80083EC5D /* QRScannerView.swift */,
 				198547EB255DB4950083EC5D /* Assets.xcassets */,
 				198547F0255DB4950083EC5D /* LaunchScreen.storyboard */,
 				198547F3255DB4950083EC5D /* Info.plist */,
@@ -204,7 +199,6 @@
 				1985482D255DB5090083EC5D /* Array+Identifiable.swift */,
 				1985482E255DB5090083EC5D /* NetworkManager.swift */,
 				1985482F255DB5090083EC5D /* CodeScanner.swift */,
-				19854830255DB5090083EC5D /* Parser.swift */,
 				19854831255DB5090083EC5D /* SignalRService.swift */,
 				19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */,
 				19854833255DB5090083EC5D /* HubSession.swift */,
@@ -500,10 +494,8 @@
 				19854820255DB4B80083EC5D /* ChatView.swift in Sources */,
 				19854837255DB5090083EC5D /* AppHelper.swift in Sources */,
 				1985483D255DB5090083EC5D /* KeychainSwiftDistrib.swift in Sources */,
-				1985483B255DB5090083EC5D /* Parser.swift in Sources */,
 				19854848255DB5100083EC5D /* UserModel.swift in Sources */,
 				1985483A255DB5090083EC5D /* CodeScanner.swift in Sources */,
-				1985481F255DB4B80083EC5D /* QRScannerView.swift in Sources */,
 				19854821255DB4B80083EC5D /* QRGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -117,7 +117,6 @@ final class NetworkManager {
           if let data = responseData, let _ = String(data: data, encoding: .utf8) {
             let decoder = JSONDecoder()
             if let parsedResult: YekeBackendResult = try? decoder.decode(YekeBackendResult.self, from: data) {
-//              print("parsedResult \(parsedResult)")
               if let error = parsedResult.error { return errorHandler(error) }
             }
           }
@@ -126,7 +125,6 @@ final class NetworkManager {
       }
       
       if let data = responseData, let result = String(data: data, encoding: .utf8) {
-//        print(result)
         completionHandler(result)
       }
       
@@ -165,3 +163,4 @@ extension URLResponse {
         return nil
     }
 }
+

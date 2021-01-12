@@ -22,9 +22,7 @@ struct QRGeneratorView: View {
     VStack{
       HStack {
         Spacer()
-        Button(action: {
-          self.showQRGeneratorView = false
-        }) { Text("Done") }
+        Button(action: { self.showQRGeneratorView = false }) { Text("Done") }
         .padding()
       }
       Spacer()
