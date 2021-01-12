@@ -57,16 +57,14 @@ struct ChatListItemView: View {
             ZStack {
               Circle().fill(AppHelper.chooseRandomColor())
                 .frame(width: size.height - 10, height: size.height - 10)
-                .padding(.leading, 10)
               Text(AppHelper.chooseRandomImage()).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             }.frame(width: size.height, height:size.height)
-            Text(chatItem.lastMessage?.message ?? "Write now or... will be gone soon!").padding(.top, 10)
+            Text(chatItem.lastMessage?.message ?? "Write now or... will be gone soon!").padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 10))
               .font(.subheadline)
-            Spacer()
           }
-          Text(AppHelper.dateFormatter(isoDate: chatItem.lastMessage?.createdOn ?? "fd")).font(.footnote).foregroundColor(Color.gray)
-            .frame(width: size.width, height: size.height, alignment: .topTrailing)
-         }.font(.title)
+          Text(AppHelper.dateFormatter(isoDate: chatItem.lastMessage?.createdOn ?? "fd")).font(.system(size: 10, weight: .semibold)).foregroundColor(Color.gray)
+            .frame(width: size.width, height: size.height, alignment: .bottomTrailing)
+         }.padding(.trailing, -20).font(.title)
       }
     }
     .foregroundColor(Color.black)
@@ -84,6 +82,6 @@ struct ChatListView_Previews: PreviewProvider {
     
     chat.appendToChatList(chatItem1)
     chat.appendToChatList(chatItem2)
-    return ChatListView(chat: chat)
+    return ChatListView(chat: chat).environmentObject(Session())
   }
 }
