@@ -42,12 +42,12 @@ struct ActionListView: View {
     .onReceive(self.session.$scannedCode) { scannedCode in
       if let code = scannedCode {
         setOpenURL(url: URL(string:"yeke://chat?\(code)")) { item in
-            if let chatItem = item {
-              DispatchQueue.main.async {
-                chat.setCurrentChatItem(chatItem)
-                showChatView = true
-              }
+          if let chatItem = item {
+            DispatchQueue.main.async {
+              chat.setCurrentChatItem(chatItem)
+              showChatView = true
             }
+          }
         }
       }
     }
