@@ -17,6 +17,8 @@ struct ActionListView: View {
   @State var qrCode: String = ""
   @Binding var showRandomChatView: Bool
   
+  let transparentOrange = Color(UIColor(Color.orange).withAlphaComponent(0.7))
+  
   var body: some View {
     GeometryReader{ geometry in
       self.body(for: geometry.size)
@@ -25,6 +27,8 @@ struct ActionListView: View {
   
   @ViewBuilder
   private func body(for size: CGSize) -> some View {
+    ZStack {
+      transparentOrange.edgesIgnoringSafeArea(.all)
     List {
       Button(action: { startRandomChat() }) { Text("Random Chat") }
       Button(action: { self.isPresentingScanner = true }) { Text("Scan QR")}
@@ -52,6 +56,8 @@ struct ActionListView: View {
       }
     }
     .listStyle(PlainListStyle())
+    .environment(\.defaultMinListRowHeight, 50)
+  }
   }
   
   var scannerSheet : some View {

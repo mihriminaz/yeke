@@ -12,11 +12,19 @@ struct ChatListView: View {
   @EnvironmentObject var session: Session
 
   var body: some View {
-    List(chat.chatList) { chatItem in
-      if let code = chatItem.code {
-        ChatListItemView(code: code, chat: chat).environmentObject(session)
-      }
-    }.environment(\.defaultMinListRowHeight, 75)
+    UITableView.appearance().backgroundColor = .clear
+    UITableViewCell.appearance().backgroundColor = .clear
+    return ZStack {
+      List {
+       ForEach(chat.chatList, id: \.self) { chatItem in
+        if let code = chatItem.code {
+          ChatListItemView(code: code, chat: chat).environmentObject(session).listRowBackground(Color.clear)
+            .listRowInsets(.none)
+        }
+       }
+      }.listStyle(PlainListStyle())
+      .environment(\.defaultMinListRowHeight, 75)
+    }
   }
 }
 
@@ -39,33 +47,32 @@ struct ChatListItemView: View {
   }
   
   var body: some View {
-    Group {
-      if let chatItem = self.chatItem {
-        GeometryReader{ geometry in
-          self.body(for: geometry.size, chatItem: chatItem)
-        }
+    if let chatItem = self.chatItem {
+      GeometryReader{ geometry in
+        self.body(for: geometry.size, chatItem: chatItem)
       }
     }
   }
   
   @ViewBuilder
-  private func body(for size: CGSize, chatItem: ChatItem) -> some View {
-    ZStack {
-      NavigationLink(destination: ChatView(chat: chat, chatItem: chatItem, currentUser: session.currentUser)) {
-        ZStack {
-          HStack {
-            ZStack {
-              Circle().fill(AppHelper.chooseRandomColor())
-                .frame(width: size.height - 10, height: size.height - 10)
-              Text(AppHelper.chooseRandomImage()).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-            }.frame(width: size.height, height:size.height)
-            Text(chatItem.lastMessage?.message ?? "Write now or... will be gone soon!").padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 10))
-              .font(.subheadline)
-          }
-          Text(AppHelper.dateFormatter(isoDate: chatItem.lastMessage?.createdOn ?? "fd")).font(.system(size: 10, weight: .semibold)).foregroundColor(Color.gray)
-            .frame(width: size.width, height: size.height, alignment: .bottomTrailing)
-         }.padding(.trailing, -20).font(.title)
+  private func body(for size: CGSize, chatItem: ChatItem) ->
+   some View {
+    NavigationLink(destination: ChatView(chat: chat, chatItem: chatItem, currentUser: session.currentUser)) {
+      ZStack {
+        HStack {
+          ZStack {
+            Circle().fill(AppHelper.chooseRandomColor())
+              .frame(width: size.height - 10, height: size.height - 10)
+              .padding(.leading, -5)
+            Text(chatItem.avatar).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+          }.frame(width: size.height, height:size.height)
+          Text(chatItem.lastMessage?.message ?? "Write now or... will be gone soon!").padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 10))
+            .font(.subheadline)
+          Spacer()
       }
+      Text(AppHelper.dateFormatter(isoDate: chatItem.lastMessage?.createdOn ?? "fd")).font(.system(size: 10, weight: .semibold)).foregroundColor(Color.gray)
+        .frame(width: size.width, height: size.height, alignment: .bottomTrailing)
+      }.padding(.trailing, -20).font(.title)
     }
     .foregroundColor(Color.black)
   }

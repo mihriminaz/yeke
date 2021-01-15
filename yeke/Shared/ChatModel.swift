@@ -96,7 +96,12 @@ class ChatModel: ObservableObject {
           if let chatLista = parsedResult.data {
             DispatchQueue.main.async {
               self.chatList.removeAll()
-              self.chatList.append(contentsOf: chatLista)
+              let mutatedChatList = chatLista.map { chatItem -> ChatItem in
+                var newChatItem = chatItem
+                newChatItem.setAvatar(avatar: UserRepository().generateAvatarIfNotYet(userID: chatItem.code))
+                return newChatItem
+              }
+              self.chatList.append(contentsOf: mutatedChatList)
             }
           }
         } catch {

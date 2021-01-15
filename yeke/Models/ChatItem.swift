@@ -7,13 +7,22 @@
 
 import Foundation
 
-struct ChatItem: Identifiable, Codable {
+struct ChatItem: Identifiable, Codable, Hashable {
   var id: Int
   var code: String
   var createdOn: String
   var lastMessage: ChatMessage?
   var receiveVendorId: String?
   var messageList: [ChatMessage]?
+  
+  var _avatar: String?
+  var avatar: String {
+    get { return _avatar ?? "🕛" }
+  }
+  
+  mutating func setAvatar(avatar: String) {
+    self._avatar = avatar
+  }
   
   mutating func setMessages(messages: [ChatMessage]) {
     self.messageList = messages

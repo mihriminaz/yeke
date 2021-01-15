@@ -34,10 +34,12 @@ struct ChatView: View {
   
   var body: some View {
     return VStack {
+      
       List((chat.currentChatItem?.messageList ?? []).reversed(), id: \.self) {
-        Text("\($0.vendor == currentUser?.userName ?  "Me" : "Them"): \($0.message)")
-          .scaleEffect(x: 1, y: -1, anchor: .center)
+        ChatMessageView(chatMessage: $0, currentUser: currentUser, avatar: chatItem?.avatar)
       }
+      .listSeparatorStyle(style: .none)
+      .environment(\.defaultMinListRowHeight, 50)
       .scaleEffect(x: 1, y: -1, anchor: .center)
       .offset(x: 0, y: 2)
       
@@ -69,11 +71,75 @@ struct ChatView: View {
   }
 }
 
+struct ChatMessageView: View {
+  private var chatMessage: ChatMessage
+  private var currentUser: UserModel?
+  private var avatar: String
+  
+  init(chatMessage: ChatMessage, currentUser: UserModel?, avatar: String?) {
+    self.currentUser = currentUser
+    self.chatMessage = chatMessage
+    self.avatar = avatar ?? "🕛"
+  }
+  
+  var body: some View {
+    Group {
+      HStack(alignment: .bottom, spacing: 15) {
+        if chatMessage.vendor != currentUser?.userName {
+          ZStack {
+            Circle().fill(AppHelper.chooseRandomColor())
+              .frame(width: 30, height: 30)
+              .padding(.leading, -5)
+            Text(avatar).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+          }
+//          .resizable()
+          .frame(width: 40, height: 40, alignment: .leading)
+          .cornerRadius(20)
+    }
+  else {
+          Spacer()
+      }
+    
+      Text(chatMessage.message)
+        .padding(10)
+        .foregroundColor(chatMessage.vendor == currentUser?.userName ? Color.white : Color.black)
+        .background(chatMessage.vendor == currentUser?.userName ? Color.blue : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
+        .cornerRadius(10)
+      }
+    }.scaleEffect(x: 1, y: -1, anchor: .center)
+  }
+}
+
+
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-      let chatItem = ChatItem(id: Date().hashValue, code: "code", createdOn: "\(Date.timeIntervalBetween1970AndReferenceDate)", lastMessage: nil, receiveVendorId: "vendor", messageList: [])
-      let session = Session()
+      let message1 = ChatMessage(id: 1, chatId: 4, code: "bbb", vendor: "Me", message: "Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.", createdOn: "2020-11-07T23:50:05.173")
+      
+      let message2 = ChatMessage(id: 2, chatId: 3, code: "aaa", vendor: "Me", message: "Hello how are you doing?", createdOn: "2020-11-07T23:50:05.173")
+      let chatItem = ChatItem(id: Date().hashValue, code: "code", createdOn: "2020-11-06T23:50:05.173", lastMessage: message2, receiveVendorId: "Me", messageList: [message1, message2])
+      let user = UserModel(keychain: KeychainSwift(), userName: "Me", password: "pass", token: "token")
+      let session = Session(user: user)
+      
       ChatView(chat: ChatModel() , chatItem: chatItem, currentUser: session.currentUser)
     }
 }
 
+
+struct ListSeparatorStyle: ViewModifier {
+    
+    let style: UITableViewCell.SeparatorStyle
+    
+    func body(content: Content) -> some View {
+        content
+            .onAppear() {
+                UITableView.appearance().separatorStyle = self.style
+            }
+    }
+}
+ 
+extension View {
+    
+    func listSeparatorStyle(style: UITableViewCell.SeparatorStyle) -> some View {
+        ModifiedContent(content: self, modifier: ListSeparatorStyle(style: style))
+    }
+}

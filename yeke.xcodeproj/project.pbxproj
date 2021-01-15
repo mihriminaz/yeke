@@ -32,6 +32,7 @@
 		19854848255DB5100083EC5D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854845255DB5100083EC5D /* UserModel.swift */; };
 		19854849255DB5100083EC5D /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19854846255DB5100083EC5D /* ChatItem.swift */; };
 		19F60AF225AD45C90077D0D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F60AF125AD45C90077D0D5 /* ContentView.swift */; };
+		19F60B0025AF380E0077D0D5 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F60AFF25AF380E0077D0D5 /* UserRepository.swift */; };
 		4B4F8E715848D84FF7D4F172 /* Pods_yeke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */; };
 		8B8479D1EF44DE1E918BB545 /* Pods_yeke_yekeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		19854845255DB5100083EC5D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		19854846255DB5100083EC5D /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		19F60AF125AD45C90077D0D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19F60AFF25AF380E0077D0D5 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yekeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62469EBCB341C8B4BC53ADAA /* Pods_yeke_yekeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke_yekeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63846194DC6B02102736337A /* Pods-yeke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeke.release.xcconfig"; path = "Target Support Files/Pods-yeke/Pods-yeke.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				19854832255DB5090083EC5D /* KeychainSwiftDistrib.swift */,
 				19854833255DB5090083EC5D /* HubSession.swift */,
 				19854834255DB5090083EC5D /* RestAPIResults.swift */,
+				19F60AFF25AF380E0077D0D5 /* UserRepository.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				1985483D255DB5090083EC5D /* KeychainSwiftDistrib.swift in Sources */,
 				19854848255DB5100083EC5D /* UserModel.swift in Sources */,
 				1985483A255DB5090083EC5D /* CodeScanner.swift in Sources */,
+				19F60B0025AF380E0077D0D5 /* UserRepository.swift in Sources */,
 				19854821255DB4B80083EC5D /* QRGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

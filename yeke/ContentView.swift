@@ -26,7 +26,8 @@ struct ContentView: View {
               .environmentObject(session)
           }
         }
-      }.navigationBarTitle("Chats", displayMode: .inline)
+      }.navigationViewStyle(StackNavigationViewStyle())
+      .navigationBarTitle("Chats", displayMode: .inline)
       .navigationBarItems(leading:
          Button(action: {
             print("delete button pressed....")

@@ -17,8 +17,8 @@ class Session: ObservableObject {
   var token: String? { currentUser?.token }
   let keychain = KeychainSwift()
   
-  init() {
-    currentUser = UserModel(keychain: KeychainSwift())
+  init(user: UserModel? = nil) {
+    currentUser = user ?? UserModel(keychain: KeychainSwift())
     
     // app can not be used no vendor
     guard self.vendorId != nil else { return }
