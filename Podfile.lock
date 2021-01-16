@@ -1,16 +1,27 @@
 PODS:
+  - AppCenter (4.1.0):
+    - AppCenter/Analytics (= 4.1.0)
+    - AppCenter/Crashes (= 4.1.0)
+  - AppCenter/Analytics (4.1.0):
+    - AppCenter/Core
+  - AppCenter/Core (4.1.0)
+  - AppCenter/Crashes (4.1.0):
+    - AppCenter/Core
   - SwiftSignalRClient (0.7.0)
 
 DEPENDENCIES:
+  - AppCenter
   - SwiftSignalRClient
 
 SPEC REPOS:
   trunk:
+    - AppCenter
     - SwiftSignalRClient
 
 SPEC CHECKSUMS:
+  AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
   SwiftSignalRClient: e6f88d5984da218a2b23fc974a56191db4fa6ae6
 
-PODFILE CHECKSUM: 66618c3a4705232b13207ca08e591b9426d0e691
+PODFILE CHECKSUM: 40ca13bfa500d55ea8e23fdca4d3efd4cc08c88c
 
 COCOAPODS: 1.9.3

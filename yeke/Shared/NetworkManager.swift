@@ -92,6 +92,10 @@ final class NetworkManager {
 
   }
   
+  func deleteChat(token: String, chatId: Int, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
+    getRequest(endPoint: "/chat/deletechat?chatId=\(chatId)", token: token, completionHandler: completionHandler, errorHandler: errorHandler)
+  }
+  
   func startRandomChat(token: String, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
     getRequest(endPoint: "/chat/startrandomchat", token: token, completionHandler: completionHandler, errorHandler: errorHandler)
   }

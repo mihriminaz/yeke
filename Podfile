@@ -7,6 +7,7 @@ target 'yeke' do
 
   # Pods for yeke
   pod 'SwiftSignalRClient'
+  pod 'AppCenter'
 
   target 'yekeTests' do
     inherit! :search_paths

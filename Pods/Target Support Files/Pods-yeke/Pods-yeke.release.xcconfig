@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSignalRClient"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSignalRClient" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenter.xcframework/ios-arm64_arm64e_armv7_armv7s" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenter.xcframework/ios-arm64_i386_x86_64-simulator" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenter.xcframework/ios-arm64_x86_64-maccatalyst" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterAnalytics.xcframework/ios-arm64_arm64e_armv7_armv7s" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterAnalytics.xcframework/ios-arm64_i386_x86_64-simulator" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterAnalytics.xcframework/ios-arm64_x86_64-maccatalyst" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterCrashes.xcframework/ios-arm64_arm64e_armv7_armv7s" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterCrashes.xcframework/ios-arm64_i386_x86_64-simulator" "${PODS_ROOT}/AppCenter/AppCenter-SDK-Apple/AppCenterCrashes.xcframework/ios-arm64_x86_64-maccatalyst"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -l"z" -framework "SwiftSignalRClient"
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"sqlite3" -l"z" -framework "AppCenter" -framework "AppCenterAnalytics" -framework "AppCenterCrashes" -framework "CoreTelephony" -framework "Foundation" -framework "SwiftSignalRClient" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

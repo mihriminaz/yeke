@@ -22,9 +22,23 @@ struct ChatListView: View {
             .listRowInsets(.none)
         }
        }
+       .onDelete(perform: removeRows)
       }.listStyle(PlainListStyle())
+      
       .environment(\.defaultMinListRowHeight, 75)
     }
+  }
+  
+  func removeRows(at offsets: IndexSet) {
+    if let index = offsets.first, let token = session.token {
+      let chatToDelete: ChatItem = chat.chatList.remove(at: index)
+      NetworkManager().deleteChat(token: token, chatId: chatToDelete.id) { result in
+          print("result", result)
+      } errorHandler: { error in
+        print("error", error)
+    }
+    }
+
   }
 }
 
