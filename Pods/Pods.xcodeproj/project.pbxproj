@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = AppCenter;
+			productName = AppCenter;
 		};
 /* End PBXAggregateTarget section */
 
@@ -106,7 +107,7 @@
 		055070037A064421B55C66AEB3C7BD85 /* Pods-yeke-yekeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yeke-yekeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		05F6A7DDCE17898CC070C8143D15CB2A /* Pods-yeke-yekeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yeke-yekeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		06150AB5E3A2CF0E2D7BC4B7573AD286 /* HttpClientProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpClientProtocol.swift; path = Sources/SignalRClient/HttpClientProtocol.swift; sourceTree = "<group>"; };
-		0CB7B76779ABDE0D59B8C45F0E05BD0C /* Pods_yeke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yeke.framework; path = "Pods-yeke.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB7B76779ABDE0D59B8C45F0E05BD0C /* Pods_yeke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE84FCCED12EE181D7062A122F0DCD6 /* TransferFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransferFormat.swift; path = Sources/SignalRClient/TransferFormat.swift; sourceTree = "<group>"; };
 		16645757CF87E8613ED443D9A54D478F /* Pods-yeke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-yeke.modulemap"; sourceTree = "<group>"; };
 		1A33FCC15D75C2FEF839308B41FAAD0C /* SwiftSignalRClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftSignalRClient-Info.plist"; sourceTree = "<group>"; };
@@ -115,24 +116,24 @@
 		31237176D8C0D27BD17BD87B037632DC /* Pods-yekeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-yekeTests-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		330ED9CC32B293B798A497238C1CF233 /* SwiftSignalRClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSignalRClient-dummy.m"; sourceTree = "<group>"; };
-		362E1A05E26C9455B654C3F442CEBC8D /* AppCenterCrashes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppCenterCrashes.xcframework; path = "AppCenter-SDK-Apple/AppCenterCrashes.xcframework"; sourceTree = "<group>"; };
+		362E1A05E26C9455B654C3F442CEBC8D /* AppCenterCrashes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppCenterCrashes.xcframework; path = "AppCenter-SDK-Apple/AppCenterCrashes.xcframework"; sourceTree = "<group>"; };
 		3878884E287B7580387DFFBB5CC8A869 /* Pods-yeke-yekeUITests-artifacts.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yeke-yekeUITests-artifacts.sh"; sourceTree = "<group>"; };
 		39D45AADA1C504081A16A28D0FE33126 /* SwiftSignalRClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSignalRClient-umbrella.h"; sourceTree = "<group>"; };
 		39D711CE19E1656FB012EF39610637A7 /* Pods-yeke-yekeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-yeke-yekeUITests-Info.plist"; sourceTree = "<group>"; };
 		3C51DA15F29A4873B3240A0CEA0FEC98 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Sources/SignalRClient/Util.swift; sourceTree = "<group>"; };
 		3C61C2780AECEE4A0258AEB6B480CC99 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/SignalRClient/WebSocket.swift; sourceTree = "<group>"; };
-		43E5260BC3813E5748F4FDF092FF5B59 /* Pods-yeke-yekeUITests-artifacts-Release-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-yekeUITests-artifacts-Release-output-files.xcfilelist"; sourceTree = "<group>"; };
+		43E5260BC3813E5748F4FDF092FF5B59 /* Pods-yeke-yekeUITests-artifacts-Release-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-yekeUITests-artifacts-Release-output-files.xcfilelist"; sourceTree = "<group>"; };
 		4CFC0D1F5D35C6BE7614FA7783687F7A /* HubConnectionBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubConnectionBuilder.swift; path = Sources/SignalRClient/HubConnectionBuilder.swift; sourceTree = "<group>"; };
-		4F6B9E24EC8211DB93662231F2CEEDFE /* Pods-yeke-artifacts-Debug-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-artifacts-Debug-input-files.xcfilelist"; sourceTree = "<group>"; };
-		5948079938A12AFC7CBE3017E612243E /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yekeTests.framework; path = "Pods-yekeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F6B9E24EC8211DB93662231F2CEEDFE /* Pods-yeke-artifacts-Debug-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-artifacts-Debug-input-files.xcfilelist"; sourceTree = "<group>"; };
+		5948079938A12AFC7CBE3017E612243E /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yekeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE91E8860850187921ECEDAF20147DE /* Pods-yeke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yeke.release.xcconfig"; sourceTree = "<group>"; };
 		5BF55B21C2AC166B707D5517B35083C9 /* DefaultHttpClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultHttpClient.swift; path = Sources/SignalRClient/DefaultHttpClient.swift; sourceTree = "<group>"; };
 		5F6C18B6DCCE100C25E404FC47483B7B /* Pods-yekeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-yekeTests.modulemap"; sourceTree = "<group>"; };
 		62156F5AC5B917EEA6F5700330EBD0E2 /* Pods-yeke-yekeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-yeke-yekeUITests-umbrella.h"; sourceTree = "<group>"; };
-		69B780BCB0347600D69DB4BCEA616E0C /* AppCenterAnalytics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppCenterAnalytics.xcframework; path = "AppCenter-SDK-Apple/AppCenterAnalytics.xcframework"; sourceTree = "<group>"; };
+		69B780BCB0347600D69DB4BCEA616E0C /* AppCenterAnalytics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppCenterAnalytics.xcframework; path = "AppCenter-SDK-Apple/AppCenterAnalytics.xcframework"; sourceTree = "<group>"; };
 		6CDC9DF91CD255A79763411DBEB3CED0 /* Pods-yeke-yekeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-yeke-yekeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6E87F784FE8811BC5D0A7E6101E2DEA7 /* Pods-yekeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-yekeTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6E91A0B77B17107FA2BB469746B945DA /* Pods-yeke-yekeUITests-artifacts-Release-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-yekeUITests-artifacts-Release-input-files.xcfilelist"; sourceTree = "<group>"; };
+		6E91A0B77B17107FA2BB469746B945DA /* Pods-yeke-yekeUITests-artifacts-Release-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-yekeUITests-artifacts-Release-input-files.xcfilelist"; sourceTree = "<group>"; };
 		6FCE31FE605ED62356B7C2CB136FF5A9 /* JSONHubProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONHubProtocol.swift; path = Sources/SignalRClient/JSONHubProtocol.swift; sourceTree = "<group>"; };
 		714C2559A04D450826BE5D4787D1301F /* AppCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppCenter.debug.xcconfig; sourceTree = "<group>"; };
 		7196E3623F72CEF485661E4E30E38AFB /* ReconnectableConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReconnectableConnection.swift; path = Sources/SignalRClient/ReconnectableConnection.swift; sourceTree = "<group>"; };
@@ -145,14 +146,14 @@
 		83D1E69FF81FA96DD8EE8E2103773CC9 /* TransportDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransportDelegate.swift; path = Sources/SignalRClient/TransportDelegate.swift; sourceTree = "<group>"; };
 		878A9D9F8EA291476B03E68561E83410 /* CodableHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodableHelpers.swift; path = Sources/SignalRClient/CodableHelpers.swift; sourceTree = "<group>"; };
 		883BD5229CCC860F46C7F752882C22A2 /* HandshakeProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandshakeProtocol.swift; path = Sources/SignalRClient/HandshakeProtocol.swift; sourceTree = "<group>"; };
-		8A4262F8283D62EB306DEC6078A75779 /* Pods-yeke-artifacts-Release-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-artifacts-Release-input-files.xcfilelist"; sourceTree = "<group>"; };
+		8A4262F8283D62EB306DEC6078A75779 /* Pods-yeke-artifacts-Release-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-artifacts-Release-input-files.xcfilelist"; sourceTree = "<group>"; };
 		8C2C6B7492263D045F3303BE93E55E7A /* ServerInvocationHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerInvocationHandler.swift; path = Sources/SignalRClient/ServerInvocationHandler.swift; sourceTree = "<group>"; };
-		8CE0FBE7C3653AA688EBF17B6A7DE389 /* Pods-yeke-yekeUITests-artifacts-Debug-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-yekeUITests-artifacts-Debug-input-files.xcfilelist"; sourceTree = "<group>"; };
-		9999CCAA0E8C2E169554586E084E9CEB /* Pods-yeke-yekeUITests-artifacts-Debug-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-yekeUITests-artifacts-Debug-output-files.xcfilelist"; sourceTree = "<group>"; };
-		99D0628877A733239D13718A43D35326 /* Pods-yeke-artifacts-Release-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-artifacts-Release-output-files.xcfilelist"; sourceTree = "<group>"; };
+		8CE0FBE7C3653AA688EBF17B6A7DE389 /* Pods-yeke-yekeUITests-artifacts-Debug-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-yekeUITests-artifacts-Debug-input-files.xcfilelist"; sourceTree = "<group>"; };
+		9999CCAA0E8C2E169554586E084E9CEB /* Pods-yeke-yekeUITests-artifacts-Debug-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-yekeUITests-artifacts-Debug-output-files.xcfilelist"; sourceTree = "<group>"; };
+		99D0628877A733239D13718A43D35326 /* Pods-yeke-artifacts-Release-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-artifacts-Release-output-files.xcfilelist"; sourceTree = "<group>"; };
 		9BABF48191CBBAB6143DB681D17E61DA /* ReconnectPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReconnectPolicy.swift; path = Sources/SignalRClient/ReconnectPolicy.swift; sourceTree = "<group>"; };
 		9C6708241F860120E1B5FA22D1244353 /* Pods-yeke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-yeke-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EC2D9766880B5DBC9ED11C30825B312 /* SignalRError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignalRError.swift; path = Sources/SignalRClient/SignalRError.swift; sourceTree = "<group>"; };
 		9F50783A0617CEA6E8BDF76A0C463224 /* Transport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transport.swift; path = Sources/SignalRClient/Transport.swift; sourceTree = "<group>"; };
 		A08C3C8FBCFDE41D25A0628FF2234E43 /* Pods-yeke-artifacts.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-yeke-artifacts.sh"; sourceTree = "<group>"; };
@@ -163,7 +164,7 @@
 		AF4B8871CEE8739ACF0BBBD649F51E25 /* HubProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubProtocol.swift; path = Sources/SignalRClient/HubProtocol.swift; sourceTree = "<group>"; };
 		B048B6F119B3131FA03AEA054C20DA88 /* HttpConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpConnection.swift; path = Sources/SignalRClient/HttpConnection.swift; sourceTree = "<group>"; };
 		B2E46C5F378BB676F1870DB31EA16562 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/SignalRClient/Logger.swift; sourceTree = "<group>"; };
-		B636BA4294397E8B3477B20F31FF59D4 /* Pods-yeke-artifacts-Debug-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-yeke-artifacts-Debug-output-files.xcfilelist"; sourceTree = "<group>"; };
+		B636BA4294397E8B3477B20F31FF59D4 /* Pods-yeke-artifacts-Debug-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcfilelist; path = "Pods-yeke-artifacts-Debug-output-files.xcfilelist"; sourceTree = "<group>"; };
 		BC2C6A0ED8931440A9AE7C87FBBC3330 /* HubConnectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubConnectionExtensions.swift; path = Sources/SignalRClient/HubConnectionExtensions.swift; sourceTree = "<group>"; };
 		BDA62A4B46C7AADE37B389489117F814 /* NegotiationResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NegotiationResponse.swift; path = Sources/SignalRClient/NegotiationResponse.swift; sourceTree = "<group>"; };
 		BDB03DDE93AA253D7AA921CA5384041A /* Pods-yeke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yeke.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +173,7 @@
 		C156A5AC911EF3AD5A7689F68DC482FC /* SwiftSignalRClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSignalRClient-prefix.pch"; sourceTree = "<group>"; };
 		C2A691B874F70C7E7D4ABE1EECFB1E20 /* ConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionDelegate.swift; path = Sources/SignalRClient/ConnectionDelegate.swift; sourceTree = "<group>"; };
 		C4A4D626A23DA4C2AC2CDA662CFF8CE6 /* Pods-yeke-yekeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yeke-yekeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C61D179CBD911EE0B3E57B2965CB7EDD /* Pods_yeke_yekeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_yeke_yekeUITests.framework; path = "Pods-yeke-yekeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61D179CBD911EE0B3E57B2965CB7EDD /* Pods_yeke_yekeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeke_yekeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75C50A691C112C57E9A0067B96C8DD6 /* DefaultTransportFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultTransportFactory.swift; path = Sources/SignalRClient/DefaultTransportFactory.swift; sourceTree = "<group>"; };
 		C80F8308A19F108A4C25CC336DD1371D /* Pods-yeke-yekeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-yeke-yekeUITests.modulemap"; sourceTree = "<group>"; };
 		C9E5BD7A388E2D3E09BD03EF7C83CDA7 /* HubConnectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubConnectionDelegate.swift; path = Sources/SignalRClient/HubConnectionDelegate.swift; sourceTree = "<group>"; };
@@ -182,10 +183,10 @@
 		DCDFD43C78095DA616DF6E3A055CE88C /* SwiftSignalRClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftSignalRClient.modulemap; sourceTree = "<group>"; };
 		E25390ADD5ADD6DA1F5097F6BD67D381 /* SwiftSignalRClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSignalRClient.release.xcconfig; sourceTree = "<group>"; };
 		E79B3F9D4DF8D1110EB7E0179BD6D03C /* Pods-yekeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-yekeTests.release.xcconfig"; sourceTree = "<group>"; };
-		E7AFB048F72A32D1AB967A9164E20741 /* SwiftSignalRClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftSignalRClient.framework; path = SwiftSignalRClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AFB048F72A32D1AB967A9164E20741 /* SwiftSignalRClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSignalRClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7843E65747E6AD587E4CA640E0447C7 /* Pods-yekeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-yekeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F88DCE013E65BA4BB42FF5C2300AD0DA /* Pods-yekeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-yekeTests-dummy.m"; sourceTree = "<group>"; };
-		FDD4F34272FEECC257C4C5369FA64884 /* AppCenter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppCenter.xcframework; path = "AppCenter-SDK-Apple/AppCenter.xcframework"; sourceTree = "<group>"; };
+		FDD4F34272FEECC257C4C5369FA64884 /* AppCenter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = AppCenter.xcframework; path = "AppCenter-SDK-Apple/AppCenter.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +270,6 @@
 				64BC97E16E87576CA2A8C26BE710453F /* Crashes */,
 				130829ABA451B32A322A34586E9E900D /* Support Files */,
 			);
-			name = AppCenter;
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
@@ -461,7 +461,6 @@
 				CB88C051540A6544779A38505EB79AA6 /* WebsocketsTransport.swift */,
 				9FA0C8695FDE34D6E635331D1BBC21CC /* Support Files */,
 			);
-			name = SwiftSignalRClient;
 			path = SwiftSignalRClient;
 			sourceTree = "<group>";
 		};
@@ -587,7 +586,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1230;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -747,7 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -899,6 +898,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -924,7 +924,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -943,7 +943,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -969,7 +969,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftSignalRClient/SwiftSignalRClient-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftSignalRClient/SwiftSignalRClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1014,6 +1014,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1036,7 +1037,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1141,7 +1142,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftSignalRClient/SwiftSignalRClient-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftSignalRClient/SwiftSignalRClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
