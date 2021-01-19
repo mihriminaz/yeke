@@ -34,15 +34,19 @@ struct ChatView: View {
   
   var body: some View {
     return VStack {
-      
-      List((chat.currentChatItem?.messageList ?? []).reversed(), id: \.self) {
-        ChatMessageView(chatMessage: $0, currentUser: currentUser, avatar: chatItem?.avatar)
+      List {
+        ForEach((chat.currentChatItem?.messageList ?? []).reversed(), id: \.self) { chatMessage in
+          ChatMessageView(chatMessage: chatMessage, currentUser: currentUser, avatar: chat.currentChatItem?.avatar)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .listRowInsets(EdgeInsets())
+        .background(Color.white)
       }
       .listSeparatorStyle(style: .none)
       .environment(\.defaultMinListRowHeight, 50)
       .scaleEffect(x: 1, y: -1, anchor: .center)
       .offset(x: 0, y: 2)
-      
+      Divider()
       HStack {
         TextField("Type a message", text: $text)
         Button(action: self.send) {
