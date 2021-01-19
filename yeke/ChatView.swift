@@ -89,28 +89,21 @@ struct ChatMessageView: View {
   var body: some View {
     Group {
       HStack(alignment: .bottom, spacing: 15) {
-        if chatMessage.vendor != currentUser?.userName {
-          ZStack {
-            Circle().fill(AppHelper.chooseRandomColor())
-              .frame(width: 30, height: 30)
-              .padding(.leading, -5)
-            Text(avatar).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-          }
-//          .resizable()
-          .frame(width: 40, height: 40, alignment: .leading)
-          .cornerRadius(20)
-    }
-  else {
+        if chatMessage.vendor == currentUser?.userName {
           Spacer()
-      }
+        }
     
-      Text(chatMessage.message)
-        .padding(10)
-        .foregroundColor(chatMessage.vendor == currentUser?.userName ? Color.white : Color.black)
-        .background(chatMessage.vendor == currentUser?.userName ? Color.blue : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
-        .cornerRadius(10)
+        Text(chatMessage.message)
+          .padding(10)
+          .foregroundColor(chatMessage.vendor == currentUser?.userName ? Color.white : Color.black)
+          .background(chatMessage.vendor == currentUser?.userName ? Color.blue : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
+          .cornerRadius(10)
       }
-    }.scaleEffect(x: 1, y: -1, anchor: .center)
+    }
+      .padding(.leading, 10)
+      .padding(.trailing, 10)
+    .scaleEffect(x: 1, y: -1, anchor: .center)
+    .navigationBarTitle("\(avatar)")
   }
 }
 
