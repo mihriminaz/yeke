@@ -19,7 +19,9 @@ class ChatModel: ObservableObject {
   
   func addMessageToChat(chatId: Int, message: ChatMessage) -> Bool {
     if currentChatItem != nil, currentChatItem!.id == chatId {
-      currentChatItem?.messageList?.append(message)
+      currentChatItem?.messageList?.insert(message, at: 0)
+      currentChatItem?.lastMessage = message
+      
     }
     
     if let chatItem = self.chatList.filter ({ chatItem in
@@ -27,6 +29,7 @@ class ChatModel: ObservableObject {
     }).first {
       if let chosenIndex = self.chatList.firstIndex(matching: chatItem) {
         self.chatList[chosenIndex].appendMessage(message: message)
+        self.chatList[chosenIndex].lastMessage = message
         return true
       }
     }

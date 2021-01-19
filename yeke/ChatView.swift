@@ -35,7 +35,7 @@ struct ChatView: View {
   var body: some View {
     return VStack {
       List {
-        ForEach((chat.currentChatItem?.messageList ?? []).reversed(), id: \.self) { chatMessage in
+        ForEach((chat.currentChatItem?.messageList ?? []), id: \.self) { chatMessage in
           ChatMessageView(chatMessage: chatMessage, currentUser: currentUser, avatar: chat.currentChatItem?.avatar)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)

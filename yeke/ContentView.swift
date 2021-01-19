@@ -13,16 +13,16 @@ struct ContentView: View {
   @ObservedObject var chat: ChatModel
   @State var editingMode = false
   @State var showActionView = false
-  @State var showRandomChatView = false
+  @State var showChatView = false
 
   var body: some View {
     NavigationView() {
       Group {
         ZStack {
-          NavigationLink("", destination: ChatView(chat: chat, currentUser: session.currentUser), isActive: $showRandomChatView)
+          NavigationLink("", destination: ChatView(chat: chat, currentUser: session.currentUser), isActive: $showChatView)
           ChatListView(chat: chat).environmentObject(session)
           if showActionView == true {
-            ActionListView(chat: chat, showRandomChatView: $showRandomChatView)
+            ActionListView(chat: chat, showChatView: $showChatView)
               .environmentObject(session)
           }
         }
@@ -41,11 +41,50 @@ struct ContentView: View {
         .foregroundColor(self.showActionView ? Color.black : Color.pink)
       }))
     }
+    .onOpenURL { url in
+      guard url.scheme == "yeke" else { return }
+      setOpenURL(url: url) { chatItem in
+       
+      }
+    }
     .onReceive(self.session.$connected) { connected in
       if connected {
         HubSession.current.setConnection(token: session.token!, handleMessage: self.handleMessage)
         chat.token = session.token
       }
+    }
+  }
+  
+  func setOpenURL(url: URL?, completionHandler: @escaping (ChatItem?) -> Void)  {
+    guard let token = session.token, let urlString: String =  url?.absoluteString else { return }
+    let splittedURLString = urlString.split{$0 == "?"}
+    let generatedCodeArray: [String] = splittedURLString.map(String.init)
+    
+    guard generatedCodeArray.count > 0 else { return }
+    
+    let generatedCode = generatedCodeArray[generatedCodeArray.count - 1]
+    NetworkManager().startChat(generatedCode: generatedCode, token: token) { data in
+      print("data \(data)")
+        
+      guard let jsonData = data.data(using: .utf8) else { return }
+      let decoder = JSONDecoder()
+          
+      do {
+        let chatItemResult: ChatItemResult = try decoder.decode(ChatItemResult.self, from: jsonData)
+          if let chatItem: ChatItem = chatItemResult.data {
+           print("chatItem \(chatItem)")
+            DispatchQueue.main.async {
+              self.chat.appendToChatList(chatItem)
+              self.chat.setCurrentChatItem(chatItem)
+              self.showChatView = true
+            }
+          }
+      } catch {
+        // Couldn't create audio player object, log the error
+        print("Couldn't parse the active chats  \(error)")
+      }
+    } errorHandler: { error in
+      print("errorororor \(error)")
     }
   }
   

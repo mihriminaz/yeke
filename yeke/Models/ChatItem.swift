@@ -30,6 +30,6 @@ struct ChatItem: Identifiable, Codable, Hashable {
   
   mutating func appendMessage(message: ChatMessage) {
     if self.messageList == nil { self.messageList = [] }
-    self.messageList!.append(message)
+    self.messageList!.insert(message, at: 0)
   }
 }

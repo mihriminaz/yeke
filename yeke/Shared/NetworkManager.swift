@@ -73,6 +73,10 @@ final class NetworkManager {
     request.httpBody = postData
 
     let task = URLSession.shared.dataTask(with: request) { responseData, response, error in
+      
+      if let data = responseData, let result = String(data: data, encoding: .utf8) {
+        print(result)
+      }
       if let response = response, let code = response.getStatusCode(), code != 200 {
         return errorHandler(code == 401 ? BackendError.AuthenticationError : BackendError.UnknownError)
       }

@@ -13,9 +13,8 @@ struct ActionListView: View {
   @ObservedObject var chat: ChatModel
   @State var showQRGeneratorView = false
   @State var isPresentingScanner = false
-  @State var showChatView = false
   @State var qrCode: String = ""
-  @Binding var showRandomChatView: Bool
+  @Binding var showChatView: Bool
   
   let transparentOrange = Color(UIColor(Color.orange).withAlphaComponent(0.7))
   
@@ -119,7 +118,7 @@ struct ActionListView: View {
             DispatchQueue.main.async {
               self.chat.appendToChatList(chatItem)
               self.chat.setCurrentChatItem(chatItem)
-              self.showRandomChatView = true
+              self.showChatView = true
             }
           }
       } catch {
@@ -145,7 +144,7 @@ struct ActionListView: View {
 
 struct ActionListView_Previews: PreviewProvider {
     static var previews: some View {
-      ActionListView(chat: ChatModel(), showRandomChatView: .constant(false))
+      ActionListView(chat: ChatModel(), showChatView: .constant(false))
         .environmentObject(Session())
     }
 }

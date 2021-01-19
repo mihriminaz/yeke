@@ -13,9 +13,11 @@ import AppCenterCrashes
 struct Yeke: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   
+  let session: Session = Session()
+  let chat: ChatModel = ChatModel()
   var body: some Scene {
     WindowGroup {
-      ContentView(session: Session(), chat: ChatModel())
+      ContentView(session: session, chat: chat)
     }
   }
 }
