@@ -10,6 +10,7 @@ import Foundation
 class UserRepository {
     enum Key: String, CaseIterable {
         case avatarData
+        case bgColor
         func make(for userID: String) -> String {
             return self.rawValue + "_" + userID
         }
@@ -20,12 +21,11 @@ class UserRepository {
         self.userDefaults = userDefaults
     }
     // MARK: - API
-    func storeInfo(forUserID userID: String, avatarData: String) {
-        saveValue(forKey: .avatarData, value: avatarData, userID: userID)
-    }
-    
-    func getUserInfo(forUserID userID: String) -> String? {
-        return readValue(forKey: .avatarData, userID: userID)
+    func getUserInfo(forUserID userID: String) -> (String, String)? {
+      if let avatarName: String = readValue(forKey: .avatarData, userID: userID) , let bgColorName: String = readValue(forKey: .bgColor, userID: userID) {
+        return (avatarName, bgColorName)
+      }
+      return nil
     }
     
     func removeUserInfo(forUserID userID: String) {
@@ -37,17 +37,21 @@ class UserRepository {
         }
     }
   
-  func generateAvatarIfNotYet(userID: String) -> String {
-     if let avatarName: String = readValue(forKey: .avatarData, userID: userID) {
+  func generateAvatarIfNotYet(userID: String) -> (String, String) {
+    if let avatarName: String = readValue(forKey: .avatarData, userID: userID), let bgColor: String = readValue(forKey: .bgColor, userID: userID) {
       print("avatarNameexists", avatarName)
-       return avatarName // existing
+       return (avatarName, bgColor)// existing
      }
      // generate something and use it!
     let value = AppHelper.chooseRandomImage()
     let key: Key = .avatarData
     userDefaults.set(value, forKey: key.make(for: userID))
-    print("value", value)
-    return value
+    
+    let keyBGColor: Key = .bgColor
+    let valueBGColor = AppHelper.chooseRandomColor()
+    userDefaults.set(valueBGColor, forKey: keyBGColor.make(for: userID))
+
+    return (value, valueBGColor)
    }
   
     // MARK: - Private

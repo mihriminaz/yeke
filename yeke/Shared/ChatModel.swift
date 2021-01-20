@@ -101,7 +101,9 @@ class ChatModel: ObservableObject {
               self.chatList.removeAll()
               let mutatedChatList = chatLista.map { chatItem -> ChatItem in
                 var newChatItem = chatItem
-                newChatItem.setAvatar(avatar: UserRepository().generateAvatarIfNotYet(userID: chatItem.code))
+                let (avatar, bgColor) = UserRepository().generateAvatarIfNotYet(userID: chatItem.code)
+                newChatItem.setAvatar(avatar)
+                newChatItem.setBGColor(bgColor)
                 return newChatItem
               }
               self.chatList.append(contentsOf: mutatedChatList)

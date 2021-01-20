@@ -20,8 +20,17 @@ struct ChatItem: Identifiable, Codable, Hashable {
     get { return _avatar ?? "🕛" }
   }
   
-  mutating func setAvatar(avatar: String) {
+  mutating func setAvatar(_ avatar: String) {
     self._avatar = avatar
+  }
+  
+  var _bgColor: String?
+  var bgColor: String {
+    get { return _bgColor ?? "FFF000" }
+  }
+  
+  mutating func setBGColor(_ bgColor: String) {
+    self._bgColor = bgColor
   }
   
   mutating func setMessages(messages: [ChatMessage]) {

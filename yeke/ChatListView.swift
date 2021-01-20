@@ -75,7 +75,7 @@ struct ChatListItemView: View {
       ZStack {
         HStack {
           ZStack {
-            Circle().fill(AppHelper.chooseRandomColor())
+            Circle().fill(Color(hex: chatItem.bgColor))
               .frame(width: size.height - 10, height: size.height - 10)
               .padding(.leading, -5)
             Text(chatItem.avatar).font(.system(size: 48, weight: .semibold)).padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
