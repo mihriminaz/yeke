@@ -21,7 +21,7 @@ struct ContentView: View {
         ZStack {
           NavigationLink("", destination: ChatView(chat: chat, currentUser: session.currentUser), isActive: $showChatView)
           ChatListView(chat: chat).environmentObject(session)
-          if showActionView == true {
+          if showActionView == true && showChatView == false {
             ActionListView(chat: chat, showChatView: $showChatView)
               .environmentObject(session)
           }
