@@ -30,6 +30,8 @@ class ChatModel: ObservableObject {
       if let chosenIndex = self.chatList.firstIndex(matching: chatItem) {
         self.chatList[chosenIndex].appendMessage(message: message)
         self.chatList[chosenIndex].lastMessage = message
+        let lastChatItem = self.chatList.remove(at: chosenIndex)
+        self.chatList.insert(lastChatItem, at: 0)
         return true
       }
     }
