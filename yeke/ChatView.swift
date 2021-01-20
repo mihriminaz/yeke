@@ -54,7 +54,6 @@ struct ChatView: View {
         }
       }.padding()
     }
-    .navigationBarTitle("chattin...")
     .onAppear(perform: onAppear)
   }
   
