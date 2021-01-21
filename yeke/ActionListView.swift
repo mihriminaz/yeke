@@ -37,11 +37,11 @@ struct ActionListView: View {
     .sheet(isPresented: $showQRGeneratorView) {
       QRGeneratorView(chat: chat, code: self.$qrCode, showQRGeneratorView: $showQRGeneratorView, showChatView: $showChatView)
     }
-    .onOpenURL { url in
-      setOpenURL(url: url) { chatItem in
-        if chatItem != nil { showChatView = true }
-      }
-    }
+//    .onOpenURL { url in
+//      setOpenURL(url: url) { chatItem in
+//        if chatItem != nil { showChatView = true }
+//      }
+//    }
     .onReceive(self.session.$scannedCode) { scannedCode in
       if let code = scannedCode {
         setOpenURL(url: URL(string:"yeke://chat?\(code)")) { item in
@@ -71,6 +71,7 @@ struct ActionListView: View {
   }
   
   func setOpenURL(url: URL?, completionHandler: @escaping (ChatItem?) -> Void)  {
+    print("i am in setopenurl of action list")
     guard let token = session.token, let urlString: String =  url?.absoluteString else { return }
     let splittedURLString = urlString.split{$0 == "?"}
     let generatedCodeArray: [String] = splittedURLString.map(String.init)

@@ -57,6 +57,7 @@ struct ContentView: View {
   }
   
   func setOpenURL(url: URL?, completionHandler: @escaping (ChatItem?) -> Void)  {
+    print("i am in setopenurl of content view")
     guard let token = session.token, let urlString: String =  url?.absoluteString else { return }
     let splittedURLString = urlString.split{$0 == "?"}
     let generatedCodeArray: [String] = splittedURLString.map(String.init)
