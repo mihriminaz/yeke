@@ -28,17 +28,18 @@ struct ContentView: View {
         }
       }.navigationViewStyle(StackNavigationViewStyle())
       .navigationBarTitle("Chats", displayMode: .inline)
-      .navigationBarItems(leading:
-         Button(action: {
-            print("delete button pressed....")
-         }) { Image(systemName: "trash.fill").font(.system(size: 30, weight: .semibold))
-          .foregroundColor(self.editingMode ? Color.black : Color.gray)
-         },
+      .navigationBarItems(
+//        leading:
+//         Button(action: {
+//            print("delete button pressed....")
+//         }) { Image(systemName: "trash.fill").font(.system(size: 30, weight: .semibold))
+//          .foregroundColor(self.editingMode ? Color.black : Color.gray)
+//         },
         trailing: Button(action: {
         self.showActionView = !self.showActionView
       }, label: {
         Image(systemName: self.showActionView ? "xmark.circle" : "circle.circle.fill").font(.system(size: 40, weight: .semibold))
-        .foregroundColor(self.showActionView ? Color.black : Color.pink)
+          .foregroundColor(self.showActionView ? Color.black : Color(hex: "#ECDAFE"))
       }))
     }
     .onOpenURL { url in

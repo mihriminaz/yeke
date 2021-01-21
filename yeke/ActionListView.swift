@@ -16,7 +16,7 @@ struct ActionListView: View {
   @State var qrCode: String = ""
   @Binding var showChatView: Bool
   
-  let transparentOrange = Color(UIColor(Color.orange).withAlphaComponent(0.7))
+  let transparentLilly = Color(UIColor(Color(hex: "#ECDAFE")).withAlphaComponent(0.7))
   
   var body: some View {
     GeometryReader{ geometry in
@@ -27,7 +27,7 @@ struct ActionListView: View {
   @ViewBuilder
   private func body(for size: CGSize) -> some View {
     ZStack {
-      transparentOrange.edgesIgnoringSafeArea(.all)
+      transparentLilly.edgesIgnoringSafeArea(.all)
     List {
       Button(action: { startRandomChat() }) { Text("Random Chat") }
       Button(action: { self.isPresentingScanner = true }) { Text("Scan QR")}
