@@ -59,10 +59,14 @@ struct ChatView: View {
   
   func send() {
     guard let chatId = self.chat.currentChatItem?.id else { return }
+    let chatM = ChatMessage(id: Int(TimeInterval.init()), chatId: chatId, code: String(TimeInterval.init()), vendor: currentUser?.userName, message: text, createdOn: String(TimeInterval.init()), isSent: false)
+    
+    self.chat.addMessageToChat(chatId: chatId, message: chatM)
+    
     HubSession.current.send(messageText: text, chatId: chatId) { result in
-      text = ""
       print("result \(String(describing: result))")
     }
+    text = ""
   }
   
   func onAppear() {
@@ -91,11 +95,13 @@ struct ChatMessageView: View {
         if chatMessage.vendor == currentUser?.userName {
           Spacer()
         }
+        
+        let bgColor = chatMessage.isSent ? Color.blue : Color(UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0))
     
         Text(chatMessage.message)
           .padding(10)
           .foregroundColor(chatMessage.vendor == currentUser?.userName ? Color.white : Color.black)
-          .background(chatMessage.vendor == currentUser?.userName ? Color.blue : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
+          .background(chatMessage.vendor == currentUser?.userName ? bgColor : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
           .cornerRadius(10)
       }
     }

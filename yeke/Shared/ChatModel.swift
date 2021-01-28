@@ -18,8 +18,9 @@ class ChatModel: ObservableObject {
   }
   
   func addMessageToChat(chatId: Int, message: ChatMessage) -> Bool {
+    print("addMessageToChatiscalled \(message)")
     if currentChatItem != nil, currentChatItem!.id == chatId {
-      currentChatItem?.messageList?.insert(message, at: 0)
+      currentChatItem?.appendMessage(message: message)
       currentChatItem?.lastMessage = message
       
     }

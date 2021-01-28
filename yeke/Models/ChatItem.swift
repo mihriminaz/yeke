@@ -39,6 +39,18 @@ struct ChatItem: Identifiable, Codable, Hashable {
   
   mutating func appendMessage(message: ChatMessage) {
     if self.messageList == nil { self.messageList = [] }
+    
+    for (index, theMessage) in messageList!.enumerated() {
+      print("Item \(index): \(theMessage)")
+      // TODO: check with a proper local message item id
+      if theMessage.message == message.message {
+        print("set sent it")
+        messageList?[index].isSent = true
+        return
+      }
+    }
+    
+    print("add the new message \(index): \(message)")
     self.messageList!.insert(message, at: 0)
   }
 }
