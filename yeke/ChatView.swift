@@ -59,11 +59,12 @@ struct ChatView: View {
   
   func send() {
     guard let chatId = self.chat.currentChatItem?.id else { return }
-    let chatM = ChatMessage(id: Int(TimeInterval.init()), chatId: chatId, code: String(TimeInterval.init()), vendor: currentUser?.userName, message: text, createdOn: String(TimeInterval.init()), isSent: false)
+    let clientMessageId =  String(Date().timeIntervalSince1970)
+    let chatM = ChatMessage(id: Int(TimeInterval.init()), chatId: chatId, clientMessageId: clientMessageId, code: String(TimeInterval.init()), vendor: currentUser?.userName, message: text, createdOn: String(TimeInterval.init()), isSent: false)
     
     self.chat.addMessageToChat(chatId: chatId, message: chatM)
     
-    HubSession.current.send(messageText: text, chatId: chatId) { result in
+    HubSession.current.send(messageText: text, chatId: chatId, clientMessageId: clientMessageId) { result in
       print("result \(String(describing: result))")
     }
     text = ""
@@ -115,9 +116,9 @@ struct ChatMessageView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-      let message1 = ChatMessage(id: 1, chatId: 4, code: "bbb", vendor: "Me", message: "Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.", createdOn: "2020-11-07T23:50:05.173")
+      let message1 = ChatMessage(id: 1, chatId: 4, clientMessageId: "1", code: "bbb", vendor: "Me", message: "Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.", createdOn: "2020-11-07T23:50:05.173")
       
-      let message2 = ChatMessage(id: 2, chatId: 3, code: "aaa", vendor: "Me", message: "Hello how are you doing?", createdOn: "2020-11-07T23:50:05.173")
+      let message2 = ChatMessage(id: 2, chatId: 3, clientMessageId: "2", code: "aaa", vendor: "Me", message: "Hello how are you doing?", createdOn: "2020-11-07T23:50:05.173")
       let chatItem = ChatItem(id: Date().hashValue, code: "code", createdOn: "2020-11-06T23:50:05.173", lastMessage: message2, receiveVendorId: "Me", messageList: [message1, message2])
       let user = UserModel(keychain: KeychainSwift(), userName: "Me", password: "pass", token: "token")
       let session = Session(user: user)

@@ -10,6 +10,7 @@ import Foundation
 struct ChatMessage: Identifiable, Codable, Hashable {
   var id: Int
   var chatId: Int?
+  var clientMessageId: String?
   var code: String?
   var vendor: String?
   var message: String
@@ -17,7 +18,7 @@ struct ChatMessage: Identifiable, Codable, Hashable {
   var isSent: Bool = true
   
   private enum CodingKeys: String, CodingKey {
-    case id, chatId, code, vendor, message, createdOn
+    case id, chatId, clientMessageId, code, vendor, message, createdOn
   }
   
   mutating func setSent() {

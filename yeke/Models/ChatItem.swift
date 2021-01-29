@@ -41,16 +41,14 @@ struct ChatItem: Identifiable, Codable, Hashable {
     if self.messageList == nil { self.messageList = [] }
     
     for (index, theMessage) in messageList!.enumerated() {
-      print("Item \(index): \(theMessage)")
-      // TODO: check with a proper local message item id
-      if theMessage.message == message.message {
+      if theMessage.clientMessageId == message.clientMessageId {
         print("set sent it")
         messageList?[index].isSent = true
         return
       }
     }
     
-    print("add the new message \(index): \(message)")
+    print("add the new message: \(message)")
     self.messageList!.insert(message, at: 0)
   }
 }

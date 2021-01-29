@@ -59,13 +59,13 @@ public class SignalRService: HubConnectionDelegate {
     connection.delegate = self
     
     connection.on(method: "ReceiveMessage") { (_ message: ChatMessage?) in
-      print("ReceiveMessage: chatCode - \(String(describing: message?.message)), vendor - \(String(describing: message?.chatId))")
+      print("ReceiveMessage: chatCode - \(String(describing: message?.clientMessageId)),  \(String(describing: message?.message)), vendor - \(String(describing: message?.chatId))")
       handleMessage(message)
     }
     connection.start()
   }
   
-  func sendMessage(_ message: String, chatId: Int, invocationDidComplete: @escaping (_ error: Error?) -> Void) {
-      self.connection.invoke(method: "SendMessage", chatId, message, invocationDidComplete: invocationDidComplete)
+  func sendMessage(_ message: String, chatId: Int, clientMessageId: String, invocationDidComplete: @escaping (_ error: Error?) -> Void) {
+    self.connection.invoke(method: "SendMessage", chatId, message, clientMessageId, invocationDidComplete: invocationDidComplete)
   }
 }

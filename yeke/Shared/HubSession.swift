@@ -31,7 +31,7 @@ class HubSession: ObservableObject {
     }
   }
   
-  func send(messageText: String, chatId: Int, invocationDidComplete: @escaping (_ error: Error?) -> Void) {
-    connection?.sendMessage(messageText, chatId: chatId, invocationDidComplete: invocationDidComplete)
+  func send(messageText: String, chatId: Int, clientMessageId: String, invocationDidComplete: @escaping (_ error: Error?) -> Void) {
+    connection?.sendMessage(messageText, chatId: chatId, clientMessageId: clientMessageId, invocationDidComplete: invocationDidComplete)
   }
 }

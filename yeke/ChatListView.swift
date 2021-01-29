@@ -95,10 +95,10 @@ struct ChatListItemView: View {
 struct ChatListView_Previews: PreviewProvider {
   static var previews: some View {
     let chat = ChatModel()
-    let message1 = ChatMessage(id: 1, chatId: 4, code: "bbb", vendor: "ME", message: "Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.", createdOn: "2020-11-07T23:50:05.173")
+    let message1 = ChatMessage(id: 1, chatId: 4, clientMessageId: "1",  code: "bbb", vendor: "ME", message: "Hello how are you doing? I wanted to tell you something. As a message, it should not be more than 3 lines, or what? Although I write.", createdOn: "2020-11-07T23:50:05.173")
     let chatItem1 = ChatItem(id: 4, code: "fddfd", createdOn: "2020-11-06T23:50:05.173", lastMessage: message1, receiveVendorId: "ME", messageList: [message1])
     
-    let message2 = ChatMessage(id: 2, chatId: 3, code: "aaa", vendor: "ME", message: "Hello how are you doing?", createdOn: "2020-11-07T23:50:05.173")
+    let message2 = ChatMessage(id: 2, chatId: 3, clientMessageId: "2", code: "aaa", vendor: "ME", message: "Hello how are you doing?", createdOn: "2020-11-07T23:50:05.173")
     let chatItem2 = ChatItem(id: 5, code: "fddfd", createdOn: "2020-11-06T23:50:05.173", lastMessage: message2, receiveVendorId: "ME", messageList: [message2])
     
     chat.appendToChatList(chatItem1)
