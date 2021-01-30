@@ -9,12 +9,27 @@ import SwiftUI
 import AppCenter
 import AppCenterCrashes
 
-@main
-struct Yeke: App {
-  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+let session: Session = Session()
+let chat: ChatModel = ChatModel()
 
-  let session: Session = Session()
-  let chat: ChatModel = ChatModel()
+@main
+struct Yeke {
+    static func main() {
+        if #available(iOS 14.0, *) {
+          YekeNewUI.main()
+        } else {
+            UIApplicationMain(
+                CommandLine.argc,
+                CommandLine.unsafeArgv,
+                nil,
+                NSStringFromClass(AppDelegate.self))
+        }
+    }
+}
+
+@available(iOS 14.0, *)
+struct YekeNewUI: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   var body: some Scene {
     WindowGroup {
       ContentView(session: session, chat: chat)
