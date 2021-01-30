@@ -76,6 +76,7 @@ struct ContentView: View {
           if let chatItem: ChatItem = chatItemResult.data {
            print("chatItem \(chatItem)")
             DispatchQueue.main.async {
+              self.showActionView = false
               self.chat.appendToChatList(chatItem)
               self.chat.setCurrentChatItem(chatItem)
               self.showChatView = true
