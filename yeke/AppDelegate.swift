@@ -50,6 +50,14 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
   func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
     let deviceToken = tokenParts.joined()
+    
+    if let token = session.token {
+      NetworkManager().setDeviceToken(token: token, deviceToken: deviceToken) { response in
+        print("setDeviceToken success response \(response)")
+      } errorHandler: { error in
+        print("setDeviceToken error \(error)")
+      }
+    }
     print("Successfully registered for notifications!", deviceToken)
   }
   

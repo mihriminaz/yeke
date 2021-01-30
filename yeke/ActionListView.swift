@@ -15,6 +15,7 @@ struct ActionListView: View {
   @State var isPresentingScanner = false
   @State var qrCode: String = ""
   @Binding var showChatView: Bool
+  @Binding var showActionView: Bool
   
   let transparentLilly = Color(UIColor(Color(hex: "#ECDAFE")).withAlphaComponent(0.7))
   
@@ -48,7 +49,8 @@ struct ActionListView: View {
           if let chatItem = item {
             DispatchQueue.main.async {
               chat.setCurrentChatItem(chatItem)
-              showChatView = true
+              self.showChatView = true
+              self.showActionView = false
             }
           }
         }
@@ -66,6 +68,7 @@ struct ActionListView: View {
         if case let .success(code) = result {
           self.isPresentingScanner = false
           self.session.scannedCode = code
+          self.showActionView = false
         }
     })
   }
@@ -93,6 +96,7 @@ struct ActionListView: View {
               self.chat.appendToChatList(chatItem)
               self.chat.setCurrentChatItem(chatItem)
               self.showChatView = true
+              self.showActionView = false
             }
           }
       } catch {
@@ -120,6 +124,7 @@ struct ActionListView: View {
               self.chat.appendToChatList(chatItem)
               self.chat.setCurrentChatItem(chatItem)
               self.showChatView = true
+              self.showActionView = false
             }
           }
       } catch {
@@ -145,7 +150,7 @@ struct ActionListView: View {
 
 struct ActionListView_Previews: PreviewProvider {
     static var previews: some View {
-      ActionListView(chat: ChatModel(), showChatView: .constant(false))
+      ActionListView(chat: ChatModel(), showChatView: .constant(false), showActionView: .constant(true))
         .environmentObject(Session())
     }
 }

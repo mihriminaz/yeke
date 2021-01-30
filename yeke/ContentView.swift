@@ -11,7 +11,6 @@ import Combine
 struct ContentView: View {
   @ObservedObject var session: Session
   @ObservedObject var chat: ChatModel
-  @State var editingMode = false
   @State var showActionView = false
   @State var showChatView = false
 
@@ -22,19 +21,23 @@ struct ContentView: View {
           NavigationLink("", destination: ChatView(chat: chat, currentUser: session.currentUser), isActive: $showChatView)
           ChatListView(chat: chat).environmentObject(session)
           if showActionView == true && showChatView == false {
-            ActionListView(chat: chat, showChatView: $showChatView)
+            ActionListView(chat: chat, showChatView: $showChatView, showActionView: $showActionView)
               .environmentObject(session)
           }
         }
       }.navigationViewStyle(StackNavigationViewStyle())
       .navigationBarTitle("Chats", displayMode: .inline)
       .navigationBarItems(
-//        leading:
-//         Button(action: {
-//            print("delete button pressed....")
-//         }) { Image(systemName: "trash.fill").font(.system(size: 30, weight: .semibold))
-//          .foregroundColor(self.editingMode ? Color.black : Color.gray)
-//         },
+        leading:
+         Button(action: {
+            print("refresh button pressed....")
+          if let token = session.token {
+            chat.getChatListItems()
+          } else {
+            session.initialConnection()
+          }
+         }) { Image(systemName: "arrow.clockwise").font(.system(size: 30, weight: .semibold))
+         },
         trailing: Button(action: {
         self.showActionView = !self.showActionView
       }, label: {

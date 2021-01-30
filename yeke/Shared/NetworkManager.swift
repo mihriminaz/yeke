@@ -29,6 +29,23 @@ final class NetworkManager {
     semaphore.wait()
   }
   
+  func setDeviceToken(token: String, deviceToken: String, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
+    let semaphore = DispatchSemaphore(value: 0)
+    let parameters = "{\r\n    \"deviceToken\": \"\(deviceToken)\"\r\n}"
+    let postData =  parameters.data(using: .utf8)
+
+    var request = URLRequest(url: URL(string: "\(domainURL)/account/setdevice")!,timeoutInterval: Double.infinity)
+    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpMethod = "POST"
+    request.httpBody = postData
+
+    let task = self.request(with: request, semaphore: semaphore, completionHandler: completionHandler, errorHandler: errorHandler)
+
+    task.resume()
+    semaphore.wait()
+  }
+  
   func login(userName: String, password: String, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
     let semaphore = DispatchSemaphore(value: 1)
     let parameters = "VendorId=\(userName)&Password=\(password)&grant_type=password&Content-Type=application/x-www-form-urlencoded"
