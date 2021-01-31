@@ -34,6 +34,7 @@
 		19B3F6B825C60B9F004DBDA6 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3F6B725C60B9F004DBDA6 /* HexColor.swift */; };
 		19B3F6BD25C61934004DBDA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B3F6BC25C61934004DBDA6 /* Main.storyboard */; };
 		19B3F6CB25C62A1F004DBDA6 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3F6CA25C62A1F004DBDA6 /* KeyboardResponder.swift */; };
+		19B3F6DB25C74B68004DBDA6 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3F6DA25C74B68004DBDA6 /* TutorialView.swift */; };
 		19F60AF225AD45C90077D0D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F60AF125AD45C90077D0D5 /* ContentView.swift */; };
 		19F60B0025AF380E0077D0D5 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F60AFF25AF380E0077D0D5 /* UserRepository.swift */; };
 		4B4F8E715848D84FF7D4F172 /* Pods_yeke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB36B0AEC6EA1BC3B15FD05 /* Pods_yeke.framework */; };
@@ -92,6 +93,7 @@
 		19B3F6B725C60B9F004DBDA6 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		19B3F6BC25C61934004DBDA6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		19B3F6CA25C62A1F004DBDA6 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		19B3F6DA25C74B68004DBDA6 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		19F60AF125AD45C90077D0D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19F60AFF25AF380E0077D0D5 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5719AFFD565555281E8664B2 /* Pods_yekeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yekeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 				198547E2255DB4940083EC5D /* AppDelegate.swift */,
 				19F60AF125AD45C90077D0D5 /* ContentView.swift */,
 				1985481B255DB4B80083EC5D /* ActionListView.swift */,
+				19B3F6DA25C74B68004DBDA6 /* TutorialView.swift */,
 				1985481C255DB4B80083EC5D /* ChatListView.swift */,
 				19854819255DB4B80083EC5D /* ChatView.swift */,
 				1985481A255DB4B80083EC5D /* QRGenerator.swift */,
@@ -538,6 +541,7 @@
 				19854847255DB5100083EC5D /* ChatMessage.swift in Sources */,
 				19F60AF225AD45C90077D0D5 /* ContentView.swift in Sources */,
 				19B3F6B825C60B9F004DBDA6 /* HexColor.swift in Sources */,
+				19B3F6DB25C74B68004DBDA6 /* TutorialView.swift in Sources */,
 				19854838255DB5090083EC5D /* Array+Identifiable.swift in Sources */,
 				19854823255DB4B80083EC5D /* ChatListView.swift in Sources */,
 				1985483C255DB5090083EC5D /* SignalRService.swift in Sources */,

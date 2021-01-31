@@ -20,6 +20,11 @@ struct ContentView: View {
         ZStack {
           NavigationLink("", destination: ChatView(chat: chat, currentUser: session.currentUser), isActive: $showChatView)
           ChatListView(chat: chat).environmentObject(session)
+          
+          if chat.chatList.count <= 0 {
+            TutorialView(showActionView: $showActionView)
+          }
+
           if showActionView == true && showChatView == false {
             ActionListView(chat: chat, showChatView: $showChatView, showActionView: $showActionView)
               .environmentObject(session)
@@ -31,18 +36,18 @@ struct ContentView: View {
         leading:
          Button(action: {
             print("refresh button pressed....")
-          if let token = session.token {
+          if let _ = session.token {
             chat.getChatListItems()
           } else {
             session.initialConnection()
           }
-         }) { Image(systemName: "arrow.clockwise").font(.system(size: 30, weight: .semibold))
+         }) { Image(systemName: "arrow.clockwise").font(.system(size: 30, weight: .semibold)).foregroundColor(Color(hex: "#c397f0"))
          },
         trailing: Button(action: {
         self.showActionView = !self.showActionView
       }, label: {
         Image(systemName: self.showActionView ? "xmark.circle" : "sun.max").font(.system(size: 40, weight: .semibold))
-          .foregroundColor(self.showActionView ? Color.black : Color(hex: "#ECDAFE"))
+          .foregroundColor(self.showActionView ? Color.black : Color(hex: "#c397f0"))
       }))
     }
     .onReceive(self.session.$connected) { connected in

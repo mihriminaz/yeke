@@ -30,14 +30,14 @@ struct ActionListView: View {
     ZStack {
       transparentLilly.edgesIgnoringSafeArea(.all)
     List {
+      Button(action: { generateRandomCode() }) { Text("Generate Chat Code QR") }
+        .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
+      
       Button(action: { startRandomChat() }) { Text("Random Chat") }
         .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
       
-      Button(action: { self.isPresentingScanner = true }) { Text("Scan QR")}
+      Button(action: { self.isPresentingScanner = true }) { Text("Scan Generated QR Code")}
        .sheet(isPresented: $isPresentingScanner, content: { self.scannerSheet })
-        .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
-      
-      Button(action: { generateRandomCode() }) { Text("Generate Chat Code") }
         .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
     }
     .sheet(isPresented: $showQRGeneratorView) {
