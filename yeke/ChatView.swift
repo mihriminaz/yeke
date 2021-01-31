@@ -13,6 +13,7 @@ enum LoadResult<Success, Failure: Error> {
 }
 
 struct ChatView: View {
+  @ObservedObject private var keyboard = KeyboardResponder()
   @ObservedObject var chat: ChatModel
   @State var text: String = ""
   private var chatItem: ChatItem?
@@ -33,6 +34,10 @@ struct ChatView: View {
   }
   
   var body: some View {
+    let keyboardHeight: CGFloat
+    if #available(iOS 14.0, *) {
+      keyboardHeight = 0
+    } else { keyboardHeight = keyboard.currentHeight }
     return VStack {
       List {
         ForEach((chat.currentChatItem?.messageList ?? []), id: \.self) { chatMessage in
@@ -53,12 +58,15 @@ struct ChatView: View {
           Text("Send")
         }
       }.padding()
+      .padding(.bottom, keyboardHeight)
+      .edgesIgnoringSafeArea(.bottom)
+      .animation(.easeOut(duration: 0.16))
     }
     .onAppear(perform: onAppear)
   }
   
   func send() {
-    guard let chatId = self.chat.currentChatItem?.id else { return }
+    guard let chatId = self.chat.currentChatItem?.id, text.count > 0 else { return }
     let clientMessageId =  String(Date().timeIntervalSince1970)
     let chatM = ChatMessage(id: Int(TimeInterval.init()), chatId: chatId, clientMessageId: clientMessageId, code: String(TimeInterval.init()), vendor: currentUser?.userName, message: text, createdOn: String(TimeInterval.init()), isSent: false)
     

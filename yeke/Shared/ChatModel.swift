@@ -22,7 +22,6 @@ class ChatModel: ObservableObject {
     if currentChatItem != nil, currentChatItem!.id == chatId {
       currentChatItem?.appendMessage(message: message)
       currentChatItem?.lastMessage = message
-      
     }
     
     if let chatItem = self.chatList.filter ({ chatItem in

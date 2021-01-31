@@ -17,7 +17,7 @@ struct ActionListView: View {
   @Binding var showChatView: Bool
   @Binding var showActionView: Bool
   
-  let transparentLilly = Color(UIColor(Color(hex: "#ECDAFE")).withAlphaComponent(0.7))
+  let transparentLilly = "#ECDAFE".uicolor.withAlphaComponent(0.5).color
   
   var body: some View {
     GeometryReader{ geometry in
@@ -31,18 +31,18 @@ struct ActionListView: View {
       transparentLilly.edgesIgnoringSafeArea(.all)
     List {
       Button(action: { startRandomChat() }) { Text("Random Chat") }
+        .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
+      
       Button(action: { self.isPresentingScanner = true }) { Text("Scan QR")}
        .sheet(isPresented: $isPresentingScanner, content: { self.scannerSheet })
+        .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
+      
       Button(action: { generateRandomCode() }) { Text("Generate Chat Code") }
+        .listRowBackground(Color.white.edgesIgnoringSafeArea(.all))
     }
     .sheet(isPresented: $showQRGeneratorView) {
       QRGeneratorView(chat: chat, code: self.$qrCode, showQRGeneratorView: $showQRGeneratorView, showChatView: $showChatView)
     }
-//    .onOpenURL { url in
-//      setOpenURL(url: url) { chatItem in
-//        if chatItem != nil { showChatView = true }
-//      }
-//    }
     .onReceive(self.session.$scannedCode) { scannedCode in
       if let code = scannedCode {
         setOpenURL(url: URL(string:"yeke://chat?\(code)")) { item in
