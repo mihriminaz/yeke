@@ -63,8 +63,8 @@ final class NetworkManager {
     semaphore.wait()
   }
   
-  func getActiveChats(token: String, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
-      getRequest(endPoint: "/chat/getactivechats", token: token, completionHandler: completionHandler, errorHandler: errorHandler)
+  func getActiveChats(token: String, page: Int = 0, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {
+      getRequest(endPoint: "/chat/getactivechats/?pageIndex=\(page)", token: token, completionHandler: completionHandler, errorHandler: errorHandler)
   }
   
   func getChatMessages(chatId: Int, pageIndex: Int, token: String, completionHandler: @escaping (String) -> Void, errorHandler: @escaping (Error) -> Void) {

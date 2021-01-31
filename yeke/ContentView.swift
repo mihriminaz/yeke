@@ -37,7 +37,7 @@ struct ContentView: View {
          Button(action: {
             print("refresh button pressed....")
           if let _ = session.token {
-            chat.getChatListItems()
+            chat.getFirstTimeChatList()
           } else {
             session.initialConnection()
           }

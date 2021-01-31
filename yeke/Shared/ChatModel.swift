@@ -13,8 +13,14 @@ class ChatModel: ObservableObject {
   @Published private(set) var lastReceivedChatItem: ChatItem?
   @Published private(set) var currentChatItem: ChatItem?
   @Published var chatList = [ChatItem]()
+  var isLoadingChatListPage = false
+  private var currentChatListPage = 0
+  private var canLoadMorePagesChatList = true
+  
+  let numberOfChatItemsOnEachCall = 20
+  
   var token: String? {
-    didSet { getChatListItems() }
+    didSet { getFirstTimeChatList() }
   }
   
   func addMessageToChat(chatId: Int, message: ChatMessage) -> Bool {
@@ -90,9 +96,25 @@ class ChatModel: ObservableObject {
     }
   }
   
+  func getFirstTimeChatList() {
+    currentChatListPage = 0
+    canLoadMorePagesChatList = true
+    getChatListItems()
+  }
+  
+  func loadMoreChatListItems() {
+    if canLoadMorePagesChatList {
+      currentChatListPage = currentChatListPage + 1
+      print("fetching for more: ", currentChatListPage)
+      getChatListItems()
+    } else {
+      print("this was all you can not load more!...", currentChatListPage)
+    }
+  }
+  
   func getChatListItems() {
     guard let token = token else { return }
-    NetworkManager().getActiveChats(token: token) { data in
+    NetworkManager().getActiveChats(token: token, page: currentChatListPage) { data in
       if let jsonData = data.data(using: .utf8) {
         let decoder = JSONDecoder()
         
@@ -100,7 +122,9 @@ class ChatModel: ObservableObject {
           let parsedResult: GetActiveChatsResult = try decoder.decode(GetActiveChatsResult.self, from: jsonData)
           if let chatLista = parsedResult.data {
             DispatchQueue.main.async {
-              self.chatList.removeAll()
+              if self.currentChatListPage == 0 {
+                self.chatList.removeAll()
+              }
               let mutatedChatList = chatLista.map { chatItem -> ChatItem in
                 var newChatItem = chatItem
                 let (avatar, bgColor) = UserRepository().generateAvatarIfNotYet(userID: chatItem.code)
@@ -108,16 +132,22 @@ class ChatModel: ObservableObject {
                 newChatItem.setBGColor(bgColor)
                 return newChatItem
               }
+              
+              if chatLista.count < self.numberOfChatItemsOnEachCall { self.canLoadMorePagesChatList = false }
               self.chatList.append(contentsOf: mutatedChatList)
+              self.isLoadingChatListPage = false
             }
           }
         } catch {
           // Couldn't create audio player object, log the error
           print("Couldn't parse the active chats  \(error)")
+          self.isLoadingChatListPage = false
         }
       }
     } errorHandler: { (error) in
       print("error \(error)")
+      
+      self.isLoadingChatListPage = false
     }
   }
 }

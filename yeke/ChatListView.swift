@@ -11,6 +11,25 @@ struct ChatListView: View {
   @ObservedObject var chat: ChatModel
   @EnvironmentObject var session: Session
 
+  func loadMoreContentIfNeeded(currentItem item: ChatItem?) {
+    guard let item = item else {
+      loadMoreContent()
+      return
+    }
+
+    let thresholdIndex = chat.chatList.index(chat.chatList.endIndex, offsetBy: -5)
+    if chat.chatList.firstIndex(where: { $0.id == item.id }) == thresholdIndex {
+      loadMoreContent()
+    }
+  }
+
+  private func loadMoreContent() {
+    guard !chat.isLoadingChatListPage else { return }
+    chat.isLoadingChatListPage = true
+    
+    chat.loadMoreChatListItems()
+  }
+  
   var body: some View {
     UITableView.appearance().backgroundColor = .clear
     UITableViewCell.appearance().backgroundColor = .clear
@@ -20,6 +39,9 @@ struct ChatListView: View {
         if let code = chatItem.code {
           ChatListItemView(code: code, chat: chat).environmentObject(session).listRowBackground(Color.clear)
             .listRowInsets(.none)
+            .onAppear {
+                loadMoreContentIfNeeded(currentItem: chatItem)
+            }
         }
        }
        .onDelete(perform: removeRows)
