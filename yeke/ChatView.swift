@@ -16,6 +16,7 @@ struct ChatView: View {
   @ObservedObject private var keyboard = KeyboardResponder()
   @ObservedObject var chat: ChatModel
   @State var text: String = ""
+  @State var isFirstResponder = true
   private var chatItem: ChatItem?
   private var currentUser: UserModel?
   
@@ -40,7 +41,7 @@ struct ChatView: View {
     } else { keyboardHeight = keyboard.currentHeight }
     return VStack {
       List {
-        ForEach((chat.currentChatItem?.messageList ?? []), id: \.self) { chatMessage in
+        ForEach((chat.currentChatItem?.messageList ?? [])) { chatMessage in
           ChatMessageView(chatMessage: chatMessage, currentUser: currentUser, avatar: chat.currentChatItem?.avatar)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -53,7 +54,13 @@ struct ChatView: View {
       .offset(x: 0, y: 2)
       Divider()
       HStack {
-        TextField("Type a message", text: $text)
+//        TextField("Type a message", text: $text)
+        LegacyTextField(text: $text, isFirstResponder: $isFirstResponder){
+          $0.textColor = .red
+          $0.tintColor = .blue
+          $0.placeholder = "Type a message"
+      }
+        
         Button(action: self.send) {
           Text("Send")
         }

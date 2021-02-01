@@ -35,7 +35,7 @@ struct ChatListView: View {
     UITableViewCell.appearance().backgroundColor = .clear
     return ZStack {
       List {
-        ForEach(chat.chatList, id: \.self) { chatItem in
+        ForEach(chat.chatList) { chatItem in
         if let code = chatItem.code {
           ChatListItemView(code: code, chat: chat).environmentObject(session).listRowBackground(Color.clear)
             .listRowInsets(.none)

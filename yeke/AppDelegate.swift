@@ -22,7 +22,7 @@ struct Yeke {
           UIApplicationMain(
                     CommandLine.argc,
                     CommandLine.unsafeArgv,
-            NSStringFromClass(UIApplication.self),
+                    nil,
                     NSStringFromClass(AppDelegate.self))
         }
     }
